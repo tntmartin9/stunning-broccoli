@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystical Lawns</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #bkcover1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #2b4353; 
+        }
+
+        #bkcover2 {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            height: 270%;
+            background: linear-gradient(#16829a97,#c76e0093,#b19cd3); 
+        }
+
+        #mainpng {
+            position: absolute;
+            width: 100%;
+            height: 750px;
+        }
+
+        #aboutPagepng
+        {
+            position: fixed;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+        }
+
+        #name {
+            position: absolute;
+            color: white;
+            top: 45px;
+            left: 60px;
+            font-family: sans-serif;
+            font-size: 43px;
+        }
+
+        #menu {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.29);
+            color: white;
+            width: 40%;
+            height: 50px;
+            top: 45px;
+            right: 10px;
+        }
+
+        #about { position: absolute; left: 14%; transform:translate(-50%, 75%); }
+        #ScheduleEstimate { position: absolute; left: 37.5%; transform:translate(-50%, 75%); }
+        #ContactUs { position: absolute; left: 59%; transform:translate(-50%, 75%); }
+        #JoinUs { position: absolute; left: 81.5%; transform:translate(-50%, 75%); }
+
+        /*#logo {
+            position: absolute;
+            width: 150px;
+            height: 160px;
+            transform: translate(-50%, -50%);
+            top: 25%;
+            left: 50%;
+        }*/
+
+        #MysticalLawns {
+            position: absolute;
+            color: rgb(10, 4, 40);
+            width: 800px;
+            height: 160px;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            font-size: 150px;
+        }
+
+        #welcome {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            width: 1100px;
+            height: 160px;
+            transform: translate(-50%, -50%);
+            top: 88%;
+            left: 50%;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        #whatIDo {
+            position: relative;
+            transform: translate(0%, -50%);
+            top: 15%;
+            width: 100%;
+            height: 600px; 
+        }
+
+        #png1 {
+            position: absolute;
+            transform: translate(-50%, 0%);
+            left: 75%;
+            width: 600px;
+            height: 600px;
+            border-radius: 20%;
+        }
+
+        #mowingLawns {
+            position: absolute;
+            color: rgba(0, 178, 0, 0.644);
+            top: 130px;
+            left: 480px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        #description1 {
+            position: absolute;
+            color: rgb(0, 0, 0);
+            width: 600px;
+            top: 230px;
+            left: 330px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #mulch {
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            height: 600px; 
+        }
+
+        #png2 {
+            position: absolute;
+            transform: translate(-50%, 0%);
+            left: 25%;
+            width: 600px;
+            height: 600px;
+            border-radius: 20%;
+        }
+
+        #mulchHeadLine {
+            position: absolute;
+            color: rgb(110, 64, 0);
+            top: 130px;
+            right: 590px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        #description2 {
+            position: absolute;
+            color: rgb(0, 0, 0);
+            width: 700px;
+            top: 230px;
+            right: 330px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #plants {
+            position: absolute;
+            top: 56%;
+            width: 100%;
+            height: 600px;
+        }
+
+        #png3 {
+            position: absolute;
+            transform: translate(-50%, 0%);
+            left: 75%;
+            width: 600px;
+            height: 600px;
+            border-radius: 20%;
+        }
+
+        #plantsHeadLine {
+            position: absolute;
+            color: rgba(252, 16, 244, 0.816);
+            top: 120px;
+            left: 300px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        #description3 {
+            position: absolute;
+            color: rgb(0, 0, 0);
+            width: 600px;
+            top: 230px;
+            left: 330px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #src {
+            position: absolute;
+            transform: translate(0, -0%);
+            top: 350%;
+            width: 100%;
+            height: 500px;
+            background: #2b4353;
+        }
+
+        #credits {
+            position: absolute;
+            top: 60%;
+            left: 80px;
+            color: silver;
+        }
+
+        #followUs {
+            position: absolute;
+            top: 50%;
+            right: 160px;
+            color:white;
+        }
+
+
+        #aboutPage {
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            background-color: rgba(0, 0, 0, 0.233);
+            display: none;
+        }
+
+        #aboutPageTitle {
+            background-color: rgb(61, 61, 61);
+            color:white;
+            text-align: center;
+        }
+
+        #aboutPageDescription {
+            position: absolute;
+            width: 92%;
+            height: 230%;
+            transform: translate(-50%, 0%);
+            top: 35%;
+            left: 50%;
+            background-color: black;
+        }
+
+        #close {
+            position: absolute;
+            right: 0px;
+            background-color: plum;
+            width: 40px;
+            height: 20px;
+        }
+
+        #joinUsPage {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%; left: 50%;
+        width: 100%; height: 100%;
+        min-width: fit-content;
+        background: linear-gradient(#4a860046,#c76d0043,#b19cd37e); 
+        display: none;
+        }
+
+        #contactUsPage {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%; left: 50%;
+        width: 100%; height: 100%;
+        min-width: fit-content;
+        background-image: url(png/5525.jpg);
+        background-size: cover;
+        display: none;
+        }
+
+        #joinUsPageTitle {
+        text-align: center;
+        font-family: system-ui;
+        font-size: 120px;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        }
+
+        @media all and (max-width: 1080px) {
+
+            #whatIDo {
+            position: relative;
+            transform: translate(0%, -50%);
+            top: 15%;
+            width: 100%;
+            height: 600px; 
+        }
+
+        #png1 {
+            position: absolute;
+            transform: translate(-50%, 30%);
+            left: 78%;
+            width: 400px;
+            height: 400px;
+            border-radius: 20%;
+        }
+
+            #mowingLawns {
+            position: absolute;
+            color: rgba(0, 178, 0, 0.644);
+            top: 130px;
+            left: 170px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        #description1 {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            width: 600px;
+            top: 230px;
+            left: 20px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #mulch {
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            height: 600px; 
+        }
+
+        #png2 {
+            position: absolute;
+            transform: translate(-50%, 30%);
+            left: 22%;
+            width: 400px;
+            height: 400px;
+            border-radius: 20%;
+        }
+
+        #mulchHeadLine {
+            position: absolute;
+            color: rgb(110, 64, 0);
+            top: 130px;
+            right: 250px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        #description2 {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            width: 700px;
+            top: 230px;
+            right: 0px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #plants {
+            position: absolute;
+            top: 56%;
+            width: 100%;
+            height: 600px;
+        }
+
+        #png3 {
+            position: absolute;
+            transform: translate(-50%, 30%);
+            left: 78%;
+            width: 400px;
+            height: 400px;
+            border-radius: 20%;
+        }
+
+        #plantsHeadLine {
+            position: absolute;
+            color: rgba(252, 16, 244, 0.816);
+            top: 120px;
+            left: 250px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        #description3 {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            width: 600px;
+            top: 230px;
+            left: 20px;
+            font-family: system-ui;
+            text-align: center;
+            font-size: 18px;
+        }
+
+
+        #bkcover1 {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 1080px;
+            height: 720px;
+            background-color: rgb(99, 99, 99);
+        }
+
+        #bkcover2 {
+            position: absolute;
+            top: 100%;
+            width: 1080px;
+            height: 270%;
+            background-color: rgb(37, 37, 37);
+        }
+
+        #mainpng {
+            position: absolute;
+            width: 1080px;
+            height: 750px;
+        }
+
+        #src {
+            position: absolute;
+            transform: translate(0, -0%);
+            top: 350%;
+            width: 1080px;
+            height: 500px;
+            background-color: rgb(26, 26, 26);
+        }
+
+        #menu {
+            position: absolute;
+            top: 45px;
+            right: 0px;
+            width: 40%;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.29);
+            color: white;
+        }
+
+        #joinUsPage {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient( #b53600, #e94822, #f2910a, #efd510, #b53600,);
+            display: none;
+        }
+
+       /* #contactUsPage {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%; left: 50%;
+        width: 100%; height: 100%;
+        min-width: fit-content;
+        background-image: url(png/2856996.webp);
+        background-size: cover;
+        }
+*/
+        }
+
+        #joinUsPageDescriptionInput::placeholder {
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="bkcover1">
+        <h1 id="welcome">Welcome to my company's website ( Mystical Lawns ). To learn more scroll down.
+        </h1>
+    </div>
+    <div id="bkcover2">
+        <div id="whatIDo">
+            <h1 id="mowingLawns">Mowing Lawns</h1>
+            <h2 id="description1">We will come give you an estimate. Then we will come mow your lawn for the price we specified.
+                                  Our business mows in this set pattern:<br> 1. Weed-eat <br>2. edge trim <br>3. blow <br> If you would like us to change it for you, please message us at (405)886-9471.
+            </h2>
+            <img id="png1" src="png/IMG_7215.JPEG">
+        </div>
+
+        <div id="mulch">
+            <h1 id="mulchHeadLine">Mulching</h1>
+            <h2 id="description2">All you the customer has to do for a mulching job is: <br>
+                                  1.a. <br>
+                                  2.b. <br>
+                                  3.c. <br>
+                                  Make sure to add extra detail if needed.<br>We will need an email address to respond to.
+            </h2>
+            <img id="png2" src="png/IMG_7223.JPEG">
+        </div>
+
+        <div id="plants">
+            <h1 id="plantsHeadLine">Planting</h1>
+            <h2 id="description3">We plant many kinds of plants such as: <br>
+                                  The Maigravisti plant <br>
+                                  The Nabi <br>
+                                  The Johnun-Sallrang-Hae plant <br>
+                                  These are not real plants. This is only the alpha version of the website, so I just put random sounds that sounded like plants here.
+            </h2>
+            <img id="png3" src="png/IMG_7231.JPEG">
+        </div>
+
+    </div>
+<img id="mainpng" src="png/IMG_7212.JPEG">
+
+<div id="name">Marvin Daniels</div>
+<div id="MysticalLawns">Mystical Lawns</div>
+<!--<img id="logo" src="png/logo.jpg">-->
+<div id="menu">
+        <div id="about" onclick="openAbout()">About</div>
+        <div id="ScheduleEstimate" onclick="SE()">Estimates</div>
+        <div id="ContactUs" onclick="openContactUsPage()">Contact Us</div>
+        <div id="JoinUs" onclick="openJoinUsPage()">Join Us</div>
+</div>
+
+<div id="aboutPage">
+    <img id="aboutPagepng" src="png/aboutPagepng.jfif">
+    <img style="position: absolute; top: 0px; width: 100%; height: 423px;" src="png/logo.jpg">
+
+    <div id="aboutPageDescription">
+    <div id="close" onclick="back()">Close</div>
+    <h1 id="aboutPageTitle">Mystical Lawns</h1>
+    <br>
+    <h2 style="color: white; text-align: center;" >Who We Are</h2>
+    <h3 style="color: white; text-align: center;">We are a lawn care company in Moore, Oklahoma. We started this business on 4/3/2023 hoping to grow as big as possible
+                                                    to help people like you get the best out of their lawn.  </h3>
+    <br>
+    <h2 style="color: white; text-align: center;" >What We Do</h2>
+    <h3 style="color: white; text-align: center;" >We remodel yards and make them look amazing. Here are all the jobs we offer:
+        <br>
+        <br>1. Mowing
+        <br>2. Mulching
+        <br>3. Weeding
+        <br>4. plant plants
+    </h3>
+
+    <br>
+    <h2 style="color: white; text-align: center;" >Locations That We Cover</h2>
+    <h3 style="color: white; text-align: center;" >We remodel yards and make them look amazing. Here are all the jobs we offer:
+        <div style="position:relative; transform: translate(-50%, 0%); left: 50%; background-color: blueviolet;">
+        <h3 style="color: white; text-align: left; display: flex; align-items: center; justify-content: center;" >
+            • Moore
+        <br>• Oklahoma City
+        <br>• Norman : extra cost may apply due to distance
+        <br>• Tulsa : extra cost will apply due to distance
+        </h3>
+    </div>
+    </h3>
+
+</div>
+</div>
+
+
+<div id="SEPage" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; background-color: rgba(245, 245, 245, 0.846); display: none;">
+    <div id="SEPageBox1" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 2.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageMowing()">Mowing</div>
+    <div id="SEPageBox2" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 22.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;">Mulching</div>
+    <div id="SEPageBox3" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 42.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;">Planting</div>
+    <div id="SEPageBox4" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 62.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;">Weeding</div>
+    <div id="SEPageBox5" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 82.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;">Cleaning</div>
+    <div style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; color: rgb(123, 42, 235); display: flex; align-items: center; justify-content: center; font-size: large; text-align: center;">If you'd like to meet with one of us for an estimate<br>Make sure to click on this button before proceeding.<br><br></div>
+    <button style="width: 80px; height: 20px; position: absolute; transform: translate(-50%, -50%); top: 54%; left: 50%; background-color: rgba(0, 0, 0, 0.668); color: beige" onclick="scheduleAppointment()">...</button>
+
+    <div id="SEPageScheduleEstimateOn" style="position: absolute; transform: translate(-50%, -50%); top: 63%; left: 50%; background-color: rgb(0, 0, 0); color: rgb(130, 54, 236); display: flex; align-items: center; justify-content: center; font-size: large; text-align: center;"></div>
+    <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
+</div>
+
+<div id="SEPageJobs" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
+    <div id="SEPageMowing" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(7, 216, 7, 0.846);">
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageMowingCheckbox">Mowing:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageMowingCheckbox" value="1" checked><br>
+        <br>
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageMowingCheckbox">Edge Trimming:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageEdgeTrimmingCheckbox" value="1" checked><br>
+        <br>
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageMowingCheckbox">Weed-Eat:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageWeedEatCheckbox" value="1" checked><br>
+        <br>
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageMowingCheckbox">Blowing:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageBlowingCheckbox" value="1" checked>
+        <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
+        </div>
+</div>
+
+
+
+<div id="contactUsPage">
+    <h1 id="joinUsPageTitle">Mystical Lawns</h1>
+
+    <form onsubmit="sendEmailHelp(); reset(); return false;" style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(178, 173, 255, 0.361); display: flex; flex-direction: column; width: 70%; max-width: 600px; height: 600px; border-radius: 10px; font-weight: 800; text-align: center;">
+
+        <input style="position: relative; transform: translate(-50%, -50%); top: 20px; left: 50%;" type="text" id="contactUsPageEmailInput" placeholder="Email" required>
+        <br><textarea id="joinUsPageDescriptionInput1" style="position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; background-color: rgb(0, 0, 0); color: white; width: 595px; max-width: 595px; max-height: 423px;" type="text" id="Description1" placeholder="What can we help you with?" rows="16"></textarea>
+
+        <br><br><button type="submit" style="position: absolute; top: 30px; width: 100%; background-color: rgb(140, 0, 255); color: white; font-size: 19px; border: 0; cursor: pointer;">Send</button>
+
+        <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
+      </form>
+
+</div>
+
+
+
+<div id="joinUsPage">
+    <h1 id="joinUsPageTitle">Mystical Lawns</h1>
+    <form onsubmit="sendEmail(); reset(); return false;" style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(173, 255, 200, 0.361); display: flex; flex-direction: column; padding: 2vw 4vw; width: 70%; max-width: 600px; height: 600px; border-radius: 10px; font-weight: 800; margin-bottom: 20px; text-align: center;">
+        <input type="text" id="JoinUsPageNameInput" placeholder="Name" required>
+
+        <input type="text" id="JoinUsPageNameInetInput" placeholder="Last Name Initial" required>
+
+        <input type="text" id="JoinUsPageEmailInput" placeholder="Email" required>
+      
+        <input type="text" id="JoinUsPagePhoneNumInput" placeholder="Phone Number" required>
+
+        <input type="number" id="JoinUsPageAgeInput" placeholder="Age" max="105" required>
+
+        <br>Optional:<textarea id="joinUsPageDescriptionInput" style="background-color: rgb(0, 0, 0); color: white; width: 595px; max-width: 595px;" type="text" id="Description" placeholder="Description" rows="16"></textarea>
+      
+        <br><br><button type="submit" style="background-color: rgb(140, 0, 255); color: white; font-size: 19px; border: 0; cursor: pointer;">Send</button>
+
+        <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
+      </form>
+
+</div>
+
+
+<div id="src">
+    <div id="credits">
+        
+        
+        Mystical Lawns<br><br>
+        Moore, OK<br><br>
+        (405) 886-9471<br><br>
+        Made By: Marvin Daniels</div>
+
+        <div id="followUs">
+    <h3 id="followUsHeadLine">Follow Us</h3>
+    <a href="file:///C:/Users/User/Documents/code/index.html"><div id="youtube">Youtube</div></a><br>
+    <div id="instagram">Instagram</div><br>
+    <div id="facebook">Facebook</div><br>
+        </div>
+</div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="MysticalLawns.js"></script>
+
+    <script>
+        function sendEmail() {
+        Email.send({
+        SecureToken : "6c68c818-510d-4efd-99ca-fc793ea58f18",
+        To : 'marvindaniels2016@gmail.com',
+        From : document.getElementById("JoinUsPageEmailInput").value,
+        Subject : "I want to work with you.",
+        Body : "Name: " + document.getElementById("JoinUsPageNameInput").value
+                + "<br> Last Name Initial : " +  document.getElementById("JoinUsPageNameInetInput").value
+        + "<br> Email: " +  document.getElementById("JoinUsPageEmailInput").value
+        + "<br> Phone Number: " +  document.getElementById("JoinUsPagePhoneNumInput").value
+        + "<br> Age: " +  document.getElementById("JoinUsPageAgeInput").value
+        + "<br> Description: " +  document.getElementById("joinUsPageDescriptionInput").value
+
+        //
+    }).then(
+    message => alert("Message Sent - We will get back to you soon :)")
+    );
+        }
+
+        function sendEmailHelp() {
+        Email.send({
+        SecureToken : "6c68c818-510d-4efd-99ca-fc793ea58f18",
+        To : 'marvindaniels2016@gmail.com',
+        From : document.getElementById("contactUsPageEmailInput").value,
+        Subject : "Help",
+        Body : "help: " + document.getElementById("joinUsPageDescriptionInput1").value
+
+
+    }).then(
+    message => alert("Message Sent - We will get back to you soon :)")
+    );
+        }
+
+//
+        // + "<br> Last Name Initial : " +  document.getElementById("JoinUsPageNameInetInput").value
+        // + "<br> Email: " +  document.getElementById("JoinUsPageEmailInput").value
+        // + "<br> Phone Number: " +  document.getElementById("JoinUsPagePhoneNumberInput").value
+        // + "<br> Age: " +  document.getElementById("JoinUsPageAgeInput").value
+        // + "<br> Description: " +  document.getElementById("joinUsPageDescriptionInput").value
+        //Password : "220655C1F35E9C80CD85B6F6C3C911C99E27",
+    </script>
+</body>
+</html>
