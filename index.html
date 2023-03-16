@@ -64,16 +64,7 @@
         #ContactUs { position: absolute; left: 59%; transform:translate(-50%, 75%); }
         #JoinUs { position: absolute; left: 81.5%; transform:translate(-50%, 75%); }
 
-        /*#logo {
-            position: absolute;
-            width: 150px;
-            height: 160px;
-            transform: translate(-50%, -50%);
-            top: 25%;
-            left: 50%;
-        }*/
-
-        #MysticalLawns {
+                #MysticalLawns {
             position: absolute;
             color: rgb(10, 4, 40);
             width: 800px;
@@ -296,7 +287,7 @@
         border: 0px;
         }
 
-        @media all and (max-width: 1080px) {
+        @media only screen and (max-width: 1080px) {
 
             #whatIDo {
             position: relative;
@@ -431,7 +422,7 @@
         #mainpng {
             position: absolute;
             width: 1080px;
-            height: 750px;
+            height: 100%;
         }
 
         #src {
@@ -446,8 +437,8 @@
         #menu {
             position: absolute;
             top: 45px;
-            right: 0px;
-            width: 40%;
+            left: 190%;
+            width: 70%;
             height: 50px;
             background-color: rgba(0, 0, 0, 0.29);
             color: white;
@@ -461,6 +452,25 @@
             width: 100%;
             height: 100%;
             background: linear-gradient( #b53600, #e94822, #f2910a, #efd510, #b53600,);
+            display: none;
+        }
+
+        #MysticalLawns {
+            position: absolute;
+            color: rgb(10, 4, 40);
+            width: 800px;
+            height: 160px;
+            top: 55%;
+            left: 130%;
+            text-align: center;
+            font-size: 150px;
+        }
+
+        #ScheduleEstimate { position: absolute; left: 46%; }
+        #ContactUs { position: absolute; left: 59%; transform:translate(50%, 75%); }
+        #JoinUs { display: none; }
+
+        #welcome {
             display: none;
         }
 
@@ -559,6 +569,7 @@
             • Moore
         <br>• Oklahoma City
         <br>• Norman : extra cost may apply due to distance
+        <br>• Tulsa : extra cost will apply due to distance
         </h3>
     </div>
     </h3>
@@ -615,6 +626,7 @@
 </div>
 
 
+
 <div id="joinUsPage">
     <h1 id="joinUsPageTitle">Mystical Lawns</h1>
     <form onsubmit="sendEmail(); reset(); return false;" style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(173, 255, 200, 0.361); display: flex; flex-direction: column; padding: 2vw 4vw; width: 70%; max-width: 600px; height: 600px; border-radius: 10px; font-weight: 800; margin-bottom: 20px; text-align: center;">
@@ -639,6 +651,7 @@
         <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
       </form>
 
+
 </div>
 
 
@@ -653,7 +666,7 @@
 
         <div id="followUs">
     <h3 id="followUsHeadLine">Follow Us</h3>
-    <a href="file:///C:/Users/User/Documents/code/index.html"><div id="youtube">Youtube</div></a><br>
+    <a href="https://www.youtube.com/channel/UC1M3q7vvBr_HptAUF-ycznA"><div id="youtube">Youtube</div></a><br>
     <div id="instagram">Instagram</div><br>
     <div id="facebook">Facebook</div><br>
         </div>
@@ -696,13 +709,6 @@
     );
         }
 
-//
-        // + "<br> Last Name Initial : " +  document.getElementById("JoinUsPageNameInetInput").value
-        // + "<br> Email: " +  document.getElementById("JoinUsPageEmailInput").value
-        // + "<br> Phone Number: " +  document.getElementById("JoinUsPagePhoneNumberInput").value
-        // + "<br> Age: " +  document.getElementById("JoinUsPageAgeInput").value
-        // + "<br> Description: " +  document.getElementById("joinUsPageDescriptionInput").value
-        //Password : "220655C1F35E9C80CD85B6F6C3C911C99E27",
     </script>
 </body>
 </html>
