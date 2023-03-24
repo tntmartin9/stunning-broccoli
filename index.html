@@ -301,10 +301,10 @@
 
         #contactUsPage {
         position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%; left: 50%;
-        width: 100%; height: 100%;
-        min-width: fit-content;
+        min-width: 200px;
+        min-height: 400px;
+        width: 1920px;
+        height: 900px;
         background-image: url(png/5525.jpg);
         background-size: cover;
         display: none;
@@ -320,21 +320,17 @@
         }
 
         #SEPage {
-            width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(0, 255, 8, 0.65); display: none;
+            width: 100%; height: 900px; position: absolute; background-color: rgba(0, 255, 8, 0.65); display: none;
         }
 
         #SEPageMowing {
             width: 900px; height: 600px; position: absolute; background-color: rgb(2, 190, 2);
         }
 
-
-        @media all and (min-width: 810px) {
-
         #phoneMenu {
-            display: none;
+            color: rgb(255, 255, 255);
         }
 
-    }
 
         @media all and (max-width: 800px) {
 #whatIDo {
@@ -530,30 +526,32 @@
         border: 0px;
         }
 
-        #SEPage {
-            width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; background-color: rgba(245, 245, 245, 0.846); display: none;
-        }
-
-        #SEPageMowing {
-            width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(7, 216, 7, 0.846);
-        }
 
         #joinUsPageDescriptionInput1 {
             width: fit-content;
         }
 
-        #menu {
-            display: none;
-        }
-
         #phoneMenu {
-            top: 90px;
-            left: 400px;
+            top: 40px;
+            left: 500px;
+            position: absolute; 
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-family: sans-serif;
+            font-size: 43px;
         }
 
         #MysticalLawns {
             left: 400px;
-            top: 50%;
+            top: 430px;
+        }
+
+        #SEPageBK{
+        position: absolute; min-width: 414px; width: 800px; height: 1800px; background-color: #46cd6a; display: none;
+        }
+
+        #SEPage {
+            min-width: 300px; min-height: 300px; width: 800px; height: 900px; position: absolute; background-color: rgba(0, 255, 8, 0.65); display: none;
         }
 
         }
@@ -623,7 +621,7 @@
         <div id="JoinUs" onclick="openJoinUsPage()">Join Us</div>
 </div>
 
-<div id="phoneMenu" style="position: absolute; background-color: white; top: 20px; left: 540px; font-family: sans-serif; font-size: 43px;"> Menu
+<div id="phoneMenu"> Menu
     <div id="phoneabout" style="background-color: rgba(112, 255, 160, .5);" onclick="openAbout()">About</div>
     <div id="phoneScheduleEstimate" style="background-color: rgba(114, 189, 255, .5);" onclick="SE()">Schedule Estimates</div>
     <div id="phoneContactUs" style="background-color: rgba(255, 114, 170, .5);" onclick="openContactUsPage()">Contact Us</div>
@@ -671,40 +669,56 @@
 </div>
 
 
-<div id="SEPageBK" style="position: absolute; background-color: #46cd6a; width: 100%; height: 100%; display: none;">
+<div id="SEPageBK" style="position: absolute; background-color: #46cd6a; min-width: 100%; height:100%; display: none;">
 <div id="SEPage">
     <div id="SEPageBox1" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 2.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageMowing()">Mowing</div>
     <div id="SEPageBox2" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 22.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageMulching()">Mulching</div>
     <div id="SEPageBox3" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 42.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPagePlanting()">Planting</div>
     <div id="SEPageBox4" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 62.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageWeeding()">Weeding</div>
     <div id="SEPageBox5" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 82.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageCleaning()">Cleaning</div>
-    <button style="width: 80px; height: 20px; position: absolute; transform: translate(-50%, -50%); top: 54%; left: 50%; background-color: rgba(0, 0, 0, 0.668); color: beige" onclick="scheduleAppointment()">...</button>
+    <button style="width: 80px; height: 20px; position: absolute; transform: translate(-50%, -50%); top: 54%; left: 50%; background-color: rgba(0, 0, 0, 0.668); color: beige" onclick="scheduleAppointment()">Location?</button>
 
     <div id="SEPageScheduleEstimateOn" style="position: absolute; transform: translate(-50%, -50%); top: 63%; left: 50%; background-color: rgb(0, 0, 0); color: rgb(130, 54, 236); display: flex; align-items: center; justify-content: center; font-size: large; text-align: center;"></div>
     <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
 </div>
 
 <div id="SEPageJobs" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
+    
     <div id="SEPageMowing" style="width: 100%; height: 100%; position: absolute; background-color: #24b600; color: rgb(0, 0, 0); display: none;">
-        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageMowingCheckbox">Mowing:</label>
-        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageMowingCheckbox" value="1" checked><br>
+        <!--<label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageEdgeTrimmingCheckbox">Edge Trimming:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageEdgeTrimmingCheckbox" name="SEPageEdgeTrimmingCheckbox" value="1" checked><br>
+        <br>-->
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageWeedEatCheckbox">Weed-Eat:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageWeedEatCheckbox" name="SEPageWeedEatCheckbox" value="1" checked><br>
         <br>
-        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageMowingCheckbox">Edge Trimming:</label>
-        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageEdgeTrimmingCheckbox" value="1" checked><br>
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageBlowingCheckbox">Blowing:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageBlowingCheckbox" name="SEPageBlowingCheckbox" value="1" checked><br>
         <br>
-        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageMowingCheckbox">Weed-Eat:</label>
-        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageWeedEatCheckbox" value="1" checked><br>
-        <br>
-        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageMowingCheckbox">Blowing:</label>
-        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageBlowingCheckbox" value="1" checked><br>
-        <br>
-        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;; margin-bottom: 15px;" for="SEPageMowingCheckbox">Baging:</label>
-        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageMowingCheckbox" name="SEPageBlowingCheckbox" value="1" checked>
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;; margin-bottom: 15px;" for="SEPageBaggingCheckbox">Bagging:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageBaggingCheckbox" name="SEPageBaggingCheckbox" value="1" checked>
+        
+
+        <form onsubmit="sendEmailSE(); reset(); return false;" style="margin-top: 60px;">
+
+        <input type="text" id="SEPageMowingPageNameInput" placeholder="Name" required>
+
+        <input type="text" id="SEPageMowingPageEmailInput" placeholder="Email" required>
+
+        <input type="text" id="SEPageMowingPageAddressInput" placeholder="Address" required>
+
+        <br><textarea id="SEPageDescriptionInput" style="background-color: rgb(0, 0, 0); color: white; width: 595px; max-width: 535px; max-height: 164px;" type="text" placeholder="Extra" rows="8"></textarea>
+  
+
+        <br><br><button type="submit" style="position: relative; width: 200px; height: 100px;" onclick="SEPageMowingCheckCheckboxes()">Send</button>
+
+        </form>
+
+
         <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo()">Back</div>
         </div>
 
 
-    <div id="SEPageMulching" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
+    <div id="SEPageMulching" style="width: 900px; height: 600px; display: none;">
             <div style="position: absolute; background-color: #000000; color: aliceblue; width: 100%; height: 100%;">Sorry, We are not doing mulching jobs yet.</div>
             <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo()">Back</div>
     </div>
@@ -773,15 +787,16 @@
 </div>
 
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <script src="MysticalLawns.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
         function sendEmail() {
         Email.send({
         SecureToken : "6c68c818-510d-4efd-99ca-fc793ea58f18",
         To : 'marvin@mysticallawns.com',
-        From : "" + document.getElementById("JoinUsPageEmailInput").value,
+        From : "marvindaniels2016@gmail.com",
         Subject : "I want to work with you.",
         Body : "Name: " + document.getElementById("JoinUsPageNameInput").value
                 + "<br> Last Name Initial : " +  document.getElementById("JoinUsPageNameInetInput").value
@@ -789,6 +804,7 @@
         + "<br> Phone Number: " +  document.getElementById("JoinUsPagePhoneNumInput").value
         + "<br> Age: " +  document.getElementById("JoinUsPageAgeInput").value
         + "<br> Description: " +  document.getElementById("joinUsPageDescriptionInput").value
+        + "<br> reply to " + "" + document.getElementById("JoinUsPageEmailInput").value
 
         //
     }).then(
@@ -796,17 +812,43 @@
     );
         }
 
+
+
+        function sendEmailSE() {
+        Email.send({
+        SecureToken : "6c68c818-510d-4efd-99ca-fc793ea58f18",
+        To : 'marvin@mysticallawns.com',
+        From : "marvindaniels2016@gmail.com",
+        Subject : "SE",
+        Body : "Name: " + document.getElementById("SEPageMowingPageNameInput").value
+        + "<br>Address: " + document.getElementById("SEPageMowingPageAddressInput").value
+        + "<br> reply to: " + "" + document.getElementById("SEPageMowingPageEmailInput").value
+        + "<br><br>WeedEat: " + WeedEat
+        + "<br>Blowing: " + Blowing
+        + "<br>Bagging: " + Bagging
+        + "<br><br>Description: " +  document.getElementById("SEPageDescriptionInput").value
+
+
+    }).then(
+    message => alert("Message Sent! We will get back to you as soon as we can :) We will discuss the time and date of when we will visit later")
+    );
+        }
+
+
+
+
         function sendEmailHelp() {
         Email.send({
         SecureToken : "6c68c818-510d-4efd-99ca-fc793ea58f18",
         To : 'marvin@mysticallawns.com',
-        From : "" + document.getElementById("contactUsPageEmailInput").value,
+        From : "marvindaniels2016@gmail.com",
         Subject : "Help",
         Body : "help: " + document.getElementById("joinUsPageDescriptionInput1").value
+        + "<br> reply to " + "" + document.getElementById("contactUsPageEmailInput").value
 
 
     }).then(
-    message => alert(message)
+    message => alert("Message Sent! We will get back to you as soon as we can :)")
     );
         }
 
