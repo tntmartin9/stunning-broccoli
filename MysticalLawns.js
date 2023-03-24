@@ -3,12 +3,37 @@ function back() {
     hideEverything()
     document.getElementById("mainpng").style.display = 'inline';
     document.getElementById("ahhhhhhh").style.display = 'inline';
-    document.getElementById("menu").style.display = 'inline';
+
+    
+    if (menuSwitchDetect === 'rgb(0, 0, 0)') {
+        menuSwitch = true;
+        console.log(menuSwitchDetect);
+        document.getElementById("menu").style.display = 'none';
+        document.getElementById("phoneMenu").style.display = 'inline';
+    } else {
+        document.getElementById("phoneMenu").style.display = 'none';
+        document.getElementById("menu").style.display = 'inline';
+    }
+
+    
     document.getElementById("MysticalLawns").style.display = 'inline';
     console.log("step 3");
 }
 
 function backTwo() {
+
+    
+    if (menuSwitchDetect === 'rgb(0, 0, 0)') {
+        menuSwitch = true;
+        console.log(menuSwitchDetect);
+        document.getElementById("menu").style.display = 'none';
+        document.getElementById("phoneMenu").style.display = 'inline';
+    } else {
+        document.getElementById("phoneMenu").style.display = 'none';
+        document.getElementById("menu").style.display = 'inline';
+    }
+
+    
     //setup
     document.getElementById("SEPageJobs").style.display = 'none';
     document.getElementById("SEPageMulching").style.display = 'none';
@@ -34,31 +59,26 @@ function SE() {
 }
 
 function SEPageMowing() {
-    hideEverything();
     document.getElementById("SEPageJobs").style.display = 'inline';
     document.getElementById("SEPageMowing").style.display = 'inline';
 }
 
 function SEPageMulching() {
-    hideEverything();
     document.getElementById("SEPageJobs").style.display = 'inline';
     document.getElementById("SEPageMulching").style.display = 'inline';
 }
 
 function SEPagePlanting() {
-    hideEverything();
     document.getElementById("SEPageJobs").style.display = 'inline';
     document.getElementById("SEPagePlanting").style.display = 'inline';
 }
 
 function SEPageWeeding() {
-    hideEverything();
     document.getElementById("SEPageJobs").style.display = 'inline';
     document.getElementById("SEPageWeeding").style.display = 'inline';
 }
 
 function SEPageCleaning() {
-    hideEverything();
     document.getElementById("SEPageJobs").style.display = 'inline';
     document.getElementById("SEPageCleaning").style.display = 'inline';
 }
@@ -99,6 +119,57 @@ function hideEverything() {
 
 
 
+const phoneMenu = document.getElementById('phoneMenu');
+const style = window.getComputedStyle(phoneMenu);
+const color = style.getPropertyValue('color');
+
+let menuSwitchDetect = color;
+let menuSwitch = false;
+
+if (menuSwitchDetect === 'rgb(0, 0, 0)') {
+    menuSwitch = true;
+    console.log(menuSwitchDetect);
+    document.getElementById("menu").style.display = 'none';
+    document.getElementById("phoneMenu").style.display = 'inline';
+} else {
+    document.getElementById("phoneMenu").style.display = 'none';
+    document.getElementById("menu").style.display = 'inline';
+}
+
+
+//let SEPageEdgeTrimmingCheckbox = document.getElementById("SEPageEdgeTrimmingCheckbox");
+let SEPageWeedEatCheckbox = document.getElementById("SEPageWeedEatCheckbox");
+let SEPageBlowingCheckbox = document.getElementById("SEPageBlowingCheckbox");
+let SEPageBaggingCheckbox = document.getElementById("SEPageBaggingCheckbox");
+
+//EdgeTrimming = false;
+WeedEat = false;
+Blowing = false;
+Bagging = false;
+
+
+function SEPageMowingCheckCheckboxes() {
+/*if (SEPageEdgeTrimmingCheckbox.checked) {
+    EdgeTrimming = true;
+  } else {}*/
+
+  if (SEPageWeedEatCheckbox.checked) {
+    WeedEat = true;
+  } else {}
+
+  if (SEPageBlowingCheckbox.checked) {
+    Blowing = true;
+  } else {}
+
+  if (SEPageBaggingCheckbox.checked) {
+    Bagging = true;
+  } else {}
+
+}
+
+
+
+
 let schedule_appointment = false;
 function scheduleAppointment() {
     let SEPSEO = document.getElementById("SEPageScheduleEstimateOn");
@@ -106,7 +177,7 @@ function scheduleAppointment() {
     if (schedule_appointment === false) {
         schedule_appointment = true;
         console.log("1");
-        SEPSEO.textContent = "Hallo";
+        SEPSEO.textContent = "Hallo! We mow lawns at these locations: Moore and south of OKC";
 
     } else if (schedule_appointment === true) {
         schedule_appointment = false;
