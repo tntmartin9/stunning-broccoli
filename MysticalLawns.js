@@ -3,35 +3,13 @@ function back() {
     hideEverything()
     document.getElementById("mainpng").style.display = 'inline';
     document.getElementById("ahhhhhhh").style.display = 'inline';
-
-    
-    if (menuSwitchDetect === 'rgb(0, 0, 0)') {
-        menuSwitch = true;
-        console.log(menuSwitchDetect);
-        document.getElementById("menu").style.display = 'none';
-        document.getElementById("phoneMenu").style.display = 'inline';
-    } else {
-        document.getElementById("phoneMenu").style.display = 'none';
-        document.getElementById("menu").style.display = 'inline';
-    }
-
     
     document.getElementById("MysticalLawns").style.display = 'inline';
+    checkMenu();
     console.log("step 3");
 }
 
 function backTwo() {
-
-    
-    if (menuSwitchDetect === 'rgb(0, 0, 0)') {
-        menuSwitch = true;
-        console.log(menuSwitchDetect);
-        document.getElementById("menu").style.display = 'none';
-        document.getElementById("phoneMenu").style.display = 'inline';
-    } else {
-        document.getElementById("phoneMenu").style.display = 'none';
-        document.getElementById("menu").style.display = 'inline';
-    }
 
     
     //setup
@@ -118,7 +96,7 @@ function hideEverything() {
 
 
 
-
+function checkMenu() {
 const phoneMenu = document.getElementById('phoneMenu');
 const style = window.getComputedStyle(phoneMenu);
 const color = style.getPropertyValue('color');
@@ -126,7 +104,7 @@ const color = style.getPropertyValue('color');
 let menuSwitchDetect = color;
 let menuSwitch = false;
 
-if (menuSwitchDetect === 'rgb(0, 0, 0)') {
+if (menuSwitchDetect === 'rgb(255, 255, 255)') {
     menuSwitch = true;
     console.log(menuSwitchDetect);
     document.getElementById("menu").style.display = 'none';
@@ -134,6 +112,8 @@ if (menuSwitchDetect === 'rgb(0, 0, 0)') {
 } else {
     document.getElementById("phoneMenu").style.display = 'none';
     document.getElementById("menu").style.display = 'inline';
+}
+
 }
 
 
@@ -186,3 +166,6 @@ function scheduleAppointment() {
     }
 
 }
+
+
+checkMenu();
