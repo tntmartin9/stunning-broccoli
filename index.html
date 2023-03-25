@@ -320,7 +320,7 @@
         }
 
         #SEPage {
-            width: 100%; height: 900px; position: absolute; background-color: rgba(0, 255, 8, 0.65); display: none;
+            width: 100%; height: 1007px; position: absolute; background-color: rgba(0, 255, 8, 0.65); display: none;
         }
 
         #SEPageMowing {
@@ -328,7 +328,7 @@
         }
 
         #phoneMenu {
-            color: rgb(255, 255, 255);
+            color: rgb(255, 0, 0);
         }
 
 
@@ -535,8 +535,8 @@
             top: 40px;
             left: 500px;
             position: absolute; 
-            background-color: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             font-family: sans-serif;
             font-size: 43px;
         }
@@ -547,11 +547,21 @@
         }
 
         #SEPageBK{
-        position: absolute; min-width: 414px; width: 800px; height: 1800px; background-color: #46cd6a; display: none;
+        position: absolute; min-width: 414px; width: 800px; height: fit-content; background-color: #46cd6a00; display: none;
         }
 
         #SEPage {
-            min-width: 300px; min-height: 300px; width: 800px; height: 900px; position: absolute; background-color: rgba(0, 255, 8, 0.65); display: none;
+            min-width: 300px; min-height: 300px; width: 800px; height: fit-content; position: absolute; background-color: rgba(0, 255, 8, 0); display: none;
+        }
+
+        #SEPageMowing {
+            position: absolute;
+            top: 100%;
+        }
+
+        #contactUsPage {
+            min-width: 670px;
+            width: fit-content;
         }
 
         }
@@ -568,15 +578,15 @@
         <div id="whatIDo">
             <img id="png1" src="png/IMG_7215.JPEG">
             <h1 id="mowingLawns">Mowing Lawns</h1>
-            <h2 id="description1">
+            <h2 id="description1" onclick="SE(); SEPageMowing();">
                 Schedule Estimate
             </h2>
         </div>
 
-        <div id="mulch">
+        <!--<div id="mulch">
             <img id="png2" src="png/IMG_7223.JPEG">
             <h1 id="mulchHeadLine">Mulching</h1>
-            <h2 id="description2">
+            <h2 id="description2" onclick="SE(); SEPageMulching();">
                 Schedule Estimate
             </h2>
         </div>
@@ -584,10 +594,10 @@
         <div id="plants">
             <img id="png3" src="png/IMG_7231.JPEG">
             <h1 id="plantsHeadLine">Planting</h1>
-            <h2 id="description3">We plant many kinds of plants<br>
+            <h2 id="description3" onclick="SE(); SEPagePlanting();">We plant many kinds of plants<br>
                                   Schedule Meet-Up
             </h2>
-        </div>
+        </div>-->
 
         <div id="src">
             <div id="credits">
@@ -601,9 +611,9 @@
         
                 <div id="followUs">
             <h3 id="followUsHeadLine">Follow Us</h3>
-            <a href="https://www.youtube.com/channel/UC1M3q7vvBr_HptAUF-ycznA"><div id="youtube">Youtube</div></a><br>
-            <div id="instagram">Instagram</div><br>
-            <div id="facebook">Facebook</div><br>
+            <a href="https://www.youtube.com/@MysticalLawns/about" style="color: aliceblue;"><div id="youtube">Youtube</div></a><br>
+            <a href="https://www.instagram.com/mystical_lawns/" style="color: aliceblue;"><div id="instagram">Instagram</div></a><br>
+            <a href="https://www.facebook.com/profile.php?id=100091382343723" style="color: aliceblue;"><div id="facebook">Facebook</div></a><br>
                 </div>
         </div>
 
@@ -616,14 +626,14 @@
 <!--<img id="logo" src="png/logo.jpg">-->
 <div id="menu">
         <div id="about" onclick="openAbout()">About</div>
-        <div id="ScheduleEstimate" onclick="SE()">Schedule Estimates</div>
-        <div id="ContactUs" onclick="openContactUsPage()">Contact Us</div>
+        <div id="ScheduleEstimate" onclick="SE(); SEPageMowing()">Get Estimate</div>
+        <div id="ContactUs" onclick="openContactUsPage()">Need Help?</div>
         <div id="JoinUs" onclick="openJoinUsPage()">Join Us</div>
 </div>
 
 <div id="phoneMenu"> Menu
     <div id="phoneabout" style="background-color: rgba(112, 255, 160, .5);" onclick="openAbout()">About</div>
-    <div id="phoneScheduleEstimate" style="background-color: rgba(114, 189, 255, .5);" onclick="SE()">Schedule Estimates</div>
+    <div id="phoneScheduleEstimate" style="background-color: rgba(114, 189, 255, .5);" onclick="SE(); SEPageMowing()">Get Estimate</div>
     <div id="phoneContactUs" style="background-color: rgba(255, 114, 170, .5);" onclick="openContactUsPage()">Contact Us</div>
 </div>
 
@@ -632,20 +642,19 @@
     <!--<img style="position: relative; width: 100%; height: 423px;" src="png/logo.jpg">-->
 
     <div id="aboutPageDescription">
-    <div id="close" onclick="back()">Close</div>
+    <div id="close" onclick="back(); checkMenu();">Close</div>
     <h1 id="aboutPageTitle">Mystical Lawns</h1>
     <br>
     <h2 style="color: white; text-align: center;" >Who We Are</h2>
-    <h3 style="color: white; text-align: center;">We are a lawn care company in Moore, Oklahoma. We started this business on 4/3/2023 hoping to grow as big as possible
-                                                    to help people like you get the best out of their lawn.  </h3>
+    <h3 style="color: white; text-align: center;">I just started this business. I started it on 4/3/2023 I'm starting out with just mowing lawns but hoping to add a couple more jobs in the future. </h3>
     <br>
     <h2 style="color: white; text-align: center;" >Jobs We Offer</h2>
     <h3 style="color: white; text-align: center; background-color: rgb(43, 43, 226);" >
             1. Mowing
-        <br>2. Mulching
+       <!-- <br>2. Mulching
         <br>3. Weeding
         <br>4. Plant Plants
-        <br>4. Leaf Clean-ups
+        <br>4. Leaf Clean-ups-->
     </h3>
 
     <br>
@@ -653,8 +662,8 @@
         <div style="position:relative; transform: translate(-50%, 0%); left: 50%; background-color: blueviolet;">
         <h3 style="color: white; text-align: left; display: flex; align-items: center; justify-content: center;" >
             • Moore
-        <br>• South side of Oklahoma City
-        <br>• North side of Norman
+        <!--<br>• South side of Oklahoma City
+        <br>• North side of Norman-->
         </h3>
     </div>
     </h3>
@@ -669,17 +678,17 @@
 </div>
 
 
-<div id="SEPageBK" style="position: absolute; background-color: #46cd6a; min-width: 100%; height:100%; display: none;">
+<div id="SEPageBK" style="position: absolute; background-color: #46cd6a00; min-width: 100%; height:1007px; display: none;">
 <div id="SEPage">
-    <div id="SEPageBox1" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 2.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageMowing()">Mowing</div>
+    <!--<div id="SEPageBox1" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 2.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageMowing()">Mowing</div>
     <div id="SEPageBox2" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 22.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageMulching()">Mulching</div>
     <div id="SEPageBox3" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 42.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPagePlanting()">Planting</div>
     <div id="SEPageBox4" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 62.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageWeeding()">Weeding</div>
     <div id="SEPageBox5" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 82.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageCleaning()">Cleaning</div>
-    <button style="width: 80px; height: 20px; position: absolute; transform: translate(-50%, -50%); top: 54%; left: 50%; background-color: rgba(0, 0, 0, 0.668); color: beige" onclick="scheduleAppointment()">Location?</button>
+    <button id="locationButton" style="width: 80px; height: 20px; position: absolute; transform: translate(-50%, 0px); top: 300px; left: 50%; background-color: rgba(0, 0, 0, 0.668); color: beige" onclick="scheduleAppointment()">Location?</button>
 
-    <div id="SEPageScheduleEstimateOn" style="position: absolute; transform: translate(-50%, -50%); top: 63%; left: 50%; background-color: rgb(0, 0, 0); color: rgb(130, 54, 236); display: flex; align-items: center; justify-content: center; font-size: large; text-align: center;"></div>
-    <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
+    <div id="SEPageScheduleEstimateOn" style="position: absolute; transform: translate(-50%, -50%); top: 350px; left: 50%; background-color: rgb(0, 0, 0); color: rgb(130, 54, 236); display: flex; align-items: center; justify-content: center; font-size: large; text-align: center;"></div>
+    <div style="position: absolute; transform: translate(0%, -100%); top: 390px; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Close</div>-->
 </div>
 
 <div id="SEPageJobs" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
@@ -698,44 +707,45 @@
         <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageBaggingCheckbox" name="SEPageBaggingCheckbox" value="1" checked>
         
 
-        <form onsubmit="sendEmailSE(); reset(); return false;" style="margin-top: 60px;">
+        <form onsubmit="sendEmailSEMowing(); reset(); return false;" style="margin-top: 60px;">
 
-        <input type="text" id="SEPageMowingPageNameInput" placeholder="Name" required>
+        <input type="text" style="position: absolute; left: 190px;" id="SEPageMowingPageNameInput" placeholder="Name" required>
 
-        <input type="text" id="SEPageMowingPageEmailInput" placeholder="Email" required>
+        <input type="text" style="position: absolute; left: 372px;" id="SEPageMowingPageEmailInput" placeholder="Email" required>
 
-        <input type="text" id="SEPageMowingPageAddressInput" placeholder="Address" required>
+        <input type="text" style="position: absolute; left: 554px;" id="SEPageMowingPageAddressInput" placeholder="Address" required>
 
-        <br><textarea id="SEPageDescriptionInput" style="background-color: rgb(0, 0, 0); color: white; width: 595px; max-width: 535px; max-height: 164px;" type="text" placeholder="Extra" rows="8"></textarea>
+        <br><textarea id="SEPageDescriptionInput" style="background-color: rgb(0, 0, 0); color: white; width: 595px; max-width: 535px; max-height: 164px; margin-left: 190px;" type="text" placeholder="Extra" rows="8"></textarea>
   
 
-        <br><br><button type="submit" style="position: relative; width: 200px; height: 100px;" onclick="SEPageMowingCheckCheckboxes()">Send</button>
+        <br><br><button type="submit" style="position: relative; width: 200px; height: 100px; margin-left: 350px;" onclick="SEPageMowingCheckCheckboxes()">Send</button>
+        <div style="position: absolute; top: 550px; color:rgb(133, 81, 255); font-size: large; padding-top: 15px;">We only mow in the city of Moore as of right now.</div>
 
         </form>
 
 
-        <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo()">Back</div>
+        <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Back</div>
         </div>
 
 
     <div id="SEPageMulching" style="width: 900px; height: 600px; display: none;">
             <div style="position: absolute; background-color: #000000; color: aliceblue; width: 100%; height: 100%;">Sorry, We are not doing mulching jobs yet.</div>
-            <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo()">Back</div>
+            <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo(); checkMenu();">Back</div>
     </div>
 
     <div id="SEPagePlanting" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
             <div style="position: absolute; background-color: #000000; color: aliceblue; width: 100%; height: 100%;">Page not set up yet.</div>
-            <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo()">Back</div>
+            <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo(); checkMenu();">Back</div>
     </div>
 
     <div id="SEPageWeeding" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
             <div style="position: absolute; background-color: #000000; color: aliceblue; width: 100%; height: 100%;">Page not set up yet.</div>
-            <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo()">Back</div>
+            <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo(); checkMenu();">Back</div>
     </div>
 
     <div id="SEPageCleaning" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
-            <div style="position: absolute; background-color: #000000; color: aliceblue; width: 100%; height: 100%;">Sorry, We are not doing cleanup jobs yet.</div>
-            <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo()">Back</div>
+            <div style="position: absolute; background-color: #000000; color: aliceblue; width: 100%; height: 100%;">Sorry, We are not doing cleanup jobs yet. We will begin leaf cleanup jobs on August.</div>
+            <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo(); checkMenu();">Back</div>
     </div>
 </div>
 </div>
@@ -752,8 +762,11 @@
 
         <br><br><button type="submit" style="position: absolute; top: 30px; width: 100%; background-color: rgb(140, 0, 255); color: white; font-size: 19px; border: 0; cursor: pointer;">Send</button>
 
-        <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
-      </form>
+        <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Close</div>
+      
+        <div style="position: absolute; top: 100%; color:rgb(255, 255, 255); font-size: x-large;">marvin@mysticallawns.com</div>
+    
+    </form>
 
 </div>
 
@@ -780,7 +793,7 @@
             <h1 style="color: white;">We are not hiring right now.</h1>
         </div>
 
-        <div style="position: relative; transform: translate(0%, -100%); right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back()">Close</div>
+        <div style="position: relative; transform: translate(0%, -100%); right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Close</div>
       </form>
 
 
@@ -814,7 +827,7 @@
 
 
 
-        function sendEmailSE() {
+        function sendEmailSEMowing() {
         Email.send({
         SecureToken : "6c68c818-510d-4efd-99ca-fc793ea58f18",
         To : 'marvin@mysticallawns.com',
