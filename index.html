@@ -15,8 +15,9 @@
 #mainpng {
   position: relative;
   min-width: 800px;
+  min-height: 500px;
   width: 100%;
-  height: 720px;
+  height: 450px;
 }
 
 #ahhhhhhh {
@@ -101,7 +102,7 @@
   width: 800px;
   height: 160px;
   transform: translate(-50%, -50%);
-  top: 40%;
+  top: 220px;
   left: 50%;
   text-align: center;
   font-size: 150px;
@@ -119,6 +120,7 @@
   width: 100%;
   height: 600px;
   padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 #png1 {
@@ -333,6 +335,11 @@
 
 
         @media all and (max-width: 800px) {
+
+#mainpng {
+  height: 720px;
+}
+
 #whatIDo {
   position: relative;
   width: 100%;
@@ -547,16 +554,21 @@
         }
 
         #SEPageBK{
-        position: absolute; min-width: 414px; width: 800px; height: fit-content; background-color: #46cd6a00; display: none;
+        position: absolute; top: 0px; padding: 0%; min-width: 300px; width: 700px; height: 800px; background-color: #46cd6a00; padding: 0; margin: 0; display: none;
         }
 
         #SEPage {
-            min-width: 300px; min-height: 300px; width: 800px; height: fit-content; position: absolute; background-color: rgba(0, 255, 8, 0); display: none;
+            min-width: 300px; min-height: 300px; width: 700px; height: 600px; position: absolute; top: 0px; background-color: rgba(0, 255, 8, 0); padding: 0; margin: 0; display: none;
+        }
+
+        #SEPageJobs {
+            position: absolute;
+            top: 0px;
         }
 
         #SEPageMowing {
             position: absolute;
-            top: 100%;
+            top: 0px;
         }
 
         #contactUsPage {
@@ -571,12 +583,14 @@
     </style>
 </head>
 <body>
-    <img id="mainpng" src="png/IMG_7212.JPEG">
+
+    <div id="hideFirstPage">
+    <img id="mainpng" src="png/IMG_9258.JPEG">
 
     <div id="ahhhhhhh">
     <div id="bkcover1">
         <div id="whatIDo">
-            <img id="png1" src="png/IMG_7215.JPEG">
+            <img id="png1" src="png/IMG_7347.JPG">
             <h1 id="mowingLawns">Mowing Lawns</h1>
             <h2 id="description1" onclick="SE(); SEPageMowing();">
                 Schedule Estimate
@@ -637,6 +651,11 @@
     <div id="phoneContactUs" style="background-color: rgba(255, 114, 170, .5);" onclick="openContactUsPage()">Contact Us</div>
 </div>
 
+
+</div>
+
+
+
 <div id="aboutPage">
     <img id="aboutPagepng" src="png/aboutPagepng.jfif">
     <!--<img style="position: relative; width: 100%; height: 423px;" src="png/logo.jpg">-->
@@ -691,20 +710,20 @@
     <div style="position: absolute; transform: translate(0%, -100%); top: 390px; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Close</div>-->
 </div>
 
-<div id="SEPageJobs" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
+<div id="SEPageJobs" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 450px; left: 50%; display: none;">
     
     <div id="SEPageMowing" style="width: 100%; height: 100%; position: absolute; background-color: #24b600; color: rgb(0, 0, 0); display: none;">
         <!--<label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageEdgeTrimmingCheckbox">Edge Trimming:</label>
         <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageEdgeTrimmingCheckbox" name="SEPageEdgeTrimmingCheckbox" value="1" checked><br>
         <br>-->
-        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageWeedEatCheckbox">Weed-Eat:</label>
+        <!--<label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageWeedEatCheckbox">Weed-Eat:</label>
         <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageWeedEatCheckbox" name="SEPageWeedEatCheckbox" value="1" checked><br>
         <br>
         <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageBlowingCheckbox">Blowing:</label>
         <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageBlowingCheckbox" name="SEPageBlowingCheckbox" value="1" checked><br>
         <br>
         <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;; margin-bottom: 15px;" for="SEPageBaggingCheckbox">Bagging:</label>
-        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageBaggingCheckbox" name="SEPageBaggingCheckbox" value="1" checked>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageBaggingCheckbox" name="SEPageBaggingCheckbox" value="1" checked>-->
         
 
         <form onsubmit="sendEmailSEMowing(); reset(); return false;" style="margin-top: 60px;">
@@ -719,7 +738,7 @@
   
 
         <br><br><button type="submit" style="position: relative; width: 200px; height: 100px; margin-left: 350px;" onclick="SEPageMowingCheckCheckboxes()">Send</button>
-        <div style="position: absolute; top: 550px; color:rgb(133, 81, 255); font-size: large; padding-top: 15px;">We only mow in the city of Moore as of right now.</div>
+        <div style="position: absolute; top: 550px; left: 270px; color:rgb(133, 81, 255); font-size: large; padding-top: 15px;">We only mow in the city of Moore as of right now.</div>
 
         </form>
 
@@ -790,7 +809,7 @@
         <br><br><button type="submit" style="background-color: rgb(140, 0, 255); color: white; font-size: 19px; border: 0; cursor: pointer;">Send</button>
 
         <div style="position: absolute; background-color: black; width: 100%; height: 95%; transform: translate(-10.1%, -5.8%);">
-            <h1 style="color: white;">We are not hiring right now.</h1>
+            <h1 style="position: relative; top: 200px; color: white; text-align: center; justify-content: center; align-items: center;">We are not hiring right now.</h1>
         </div>
 
         <div style="position: relative; transform: translate(0%, -100%); right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Close</div>
@@ -836,9 +855,9 @@
         Body : "Name: " + document.getElementById("SEPageMowingPageNameInput").value
         + "<br>Address: " + document.getElementById("SEPageMowingPageAddressInput").value
         + "<br> reply to: " + "" + document.getElementById("SEPageMowingPageEmailInput").value
-        + "<br><br>WeedEat: " + WeedEat
-        + "<br>Blowing: " + Blowing
-        + "<br>Bagging: " + Bagging
+        + "<br><br>WeedEat: "
+        + "<br>Blowing: "
+        + "<br>Bagging: "
         + "<br><br>Description: " +  document.getElementById("SEPageDescriptionInput").value
 
 
