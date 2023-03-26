@@ -1,8 +1,8 @@
 function back() {
     console.log("step 2");
     hideEverything()
-    document.getElementById("mainpng").style.display = 'inline';
-    document.getElementById("ahhhhhhh").style.display = 'inline';
+    document.getElementById("hideFirstPage").style.display = 'inline';
+    // document.getElementById("ahhhhhhh").style.display = 'inline';
     
     document.getElementById("MysticalLawns").style.display = 'inline';
     checkMenu();
@@ -72,10 +72,10 @@ function openContactUsPage() {
 }
 
 function hideEverything() {
-    document.getElementById("mainpng").style.display = 'none';
-    document.getElementById("menu").style.display = 'none';
-    document.getElementById("ahhhhhhh").style.display = 'none';
-    document.getElementById("MysticalLawns").style.display = 'none';
+    document.getElementById("hideFirstPage").style.display = 'none';
+    // document.getElementById("menu").style.display = 'none';
+    // document.getElementById("ahhhhhhh").style.display = 'none';
+    // document.getElementById("MysticalLawns").style.display = 'none';
     document.getElementById("aboutPage").style.display = 'none';
     document.getElementById("aboutPagepng").style.display = 'none';
 
