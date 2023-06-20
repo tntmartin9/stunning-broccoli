@@ -60,7 +60,8 @@ right: 10px;
 #about,
 #ScheduleEstimate,
 #ContactUs,
-#JoinUs {
+#login,
+#creditInformation {
 position: absolute;
 left: 14%;
 transform: translate(-50%, 75%);
@@ -74,9 +75,14 @@ left: 37%;
 left: 61%;
 }
 
-#JoinUs {
+#login {
 left: 81.5%;
 display: inline;
+}
+
+#creditInformation {
+left: 81.5%;
+display: none;
 }
 
 /*#logo {
@@ -127,7 +133,7 @@ border-radius: 20%;
 #mowingLawns {
 position: absolute;
 color: rgba(0, 172, 0, 0.888);
-top: 190px;
+top: 200px;
 transform: translate(-50%, 0);
 left: 50%;
 font-family: system-ui;
@@ -140,14 +146,14 @@ background-color: #2b43535f;
 color: rgb(255, 255, 255);
 width: 280px;
 height: 90px;
-top: 290px;
+top: 300px;
 transform: translate(-50%, 0);
 left: 50%;
 font-family: system-ui;
 font-size: 24px;
 }
 
-#mulch {
+#PressureWashing {
     position: relative;
     width: 100%;
     height: 600px;
@@ -163,10 +169,10 @@ font-size: 24px;
     border-radius: 20%;
 }
 
-#mulchHeadLine {
+#PressureWashingHeadLine {
     position: absolute;
-    color: rgb(110, 64, 0);
-    top: 190px;
+    color: rgb(0, 157, 255);
+    top: 200px;
     transform: translate(-50%, 0%);
     left: 50%;
     font-family: system-ui;
@@ -179,7 +185,7 @@ font-size: 24px;
     color: rgb(255, 255, 255);
     width: 280px;
     height: 90px;
-    top: 290px;
+    top: 300px;
     transform: translate(-50%, 0%);
     left: 50%;
     font-family: system-ui;
@@ -285,7 +291,15 @@ font-size: 24px;
     height: 20px;
 }
 
-#joinUsPage {
+#signUpPage {
+position: absolute;
+width: 100%; height: 100%;
+min-width: fit-content;
+background: linear-gradient(#4a860046,#c76d0043,#b19cd37e); 
+display: none;
+}
+
+#loginPage {
 position: absolute;
 width: 100%; height: 100%;
 min-width: fit-content;
@@ -304,7 +318,26 @@ background-size: cover;
 display: none;
 }
 
-#joinUsPageTitle {
+#creditInformationPageImage {
+position: absolute;
+min-width: 200px;
+min-height: 400px;
+width: 100%;
+height: 100%;
+background-image: url(png/satisfying-icegif-1.gif);
+background-size: cover;
+}
+
+#signUpPageTitle {
+text-align: center;
+font-family: system-ui;
+font-size: 120px;
+margin: 0px;
+padding: 0px;
+border: 0px;
+}
+
+#loginPageTitle {
 text-align: center;
 font-family: system-ui;
 font-size: 120px;
@@ -323,6 +356,43 @@ border: 0px;
 
 #phoneMenu {
     color: rgb(255, 0, 0);
+}
+
+#PurchaseConfirmation {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30%;
+	height: 30%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(56, 56, 56);
+	color:rgb(255, 0, 102);
+	font-size: large;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+    display: none;
+}
+
+#noDontPurchase {
+	position: absolute;
+	top: 60%;
+	left: 72%;
+	width: 30%;
+	height: 20%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 229, 255, 0.717);
+    color: white;
+}
+
+#yesPurchase {
+	position: absolute;
+	top: 60%;
+	left: 27%;
+	width: 30%;
+	height: 20%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 0, 0, 0.631);
+    color: white;
 }
 
 
@@ -504,26 +574,41 @@ font-size: 24px;
     height: 20px;
 }
 
-#joinUsPage {
-position: absolute;
-transform: translate(-50%, -50%);
-top: 50%; left: 50%;
-width: 100%; height: 100%;
-min-width: fit-content;
-background: linear-gradient(#4a860046,#c76d0043,#b19cd37e); 
-display: none;
-}
+#signUpPage {
+    position: absolute;
+    width: 100%; height: 100%;
+    min-width: fit-content;
+    background: linear-gradient(#4a860046,#c76d0043,#b19cd37e); 
+    display: none;
+    }
+    
+    #loginPage {
+    position: absolute;
+    width: 100%; height: 100%;
+    min-width: fit-content;
+    background: linear-gradient(#4a860046,#c76d0043,#b19cd37e); 
+    display: none;
+    }
 
 
 
-#joinUsPageTitle {
-text-align: center;
-font-family: system-ui;
-font-size: 120px;
-margin: 0px;
-padding: 0px;
-border: 0px;
-}
+#signUpPageTitle {
+    text-align: center;
+    font-family: system-ui;
+    font-size: 120px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    }
+    
+    #loginPageTitle {
+    text-align: center;
+    font-family: system-ui;
+    font-size: 120px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    }
 
 
 #joinUsPageDescriptionInput1 {
@@ -567,6 +652,7 @@ position: absolute; top: 0px; padding: 0%; min-width: 300px; width: 700px; heigh
     min-width: 670px;
     width: fit-content;
 }
+
 
 }
 #joinUsPageDescriptionInput::placeholder {
