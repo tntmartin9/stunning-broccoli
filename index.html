@@ -13,17 +13,34 @@
 <body>
 
     <div id="hideFirstPage">
-    <img id="mainpng" src="png/IMG_9258.JPEG">
+        
+    <img id="mainpng" src="png/IMG_2333.JPG">
 
     <div id="ahhhhhhh">
     <div id="bkcover1">
         <div id="whatIDo">
-            <img id="png1" src="png/IMG_7347.JPG">
+            <img id="png1" src="png/IMG_1582.JPG">
             <h1 id="mowingLawns">Mowing Lawns</h1>
             <h2 id="description1" onclick="SE(); SEPageMowing();">
                 Schedule Estimate
             </h2>
         </div>
+
+        <!--<div id="PressureWashing">
+            <img id="png2" src="png/IMG_7223.JPEG">
+            <h1 id="PressureWashingHeadLine">Pressure Washing</h1>
+            <h2 id="description2" onclick="SE(); SEPagePressureWashing();">
+                Schedule Estimate
+            </h2>
+        </div>-->
+<!--
+        <div id="plants">
+            <img id="png3" src="png/IMG_7231.JPEG">
+            <h1 id="plantsHeadLine">Planting</h1>
+            <h2 id="description3" onclick="SE(); SEPagePlanting();">We plant many kinds of plants<br>
+                                  Schedule Meet-Up
+            </h2>
+        </div>-->
 
         <div id="src">
             <div id="credits">
@@ -47,6 +64,7 @@
     </div>
 </div>
 
+
 <div id="name">Marvin Daniels</div>
 <div id="MysticalLawns">Mystical Lawns</div>
 <!--<img id="logo" src="png/logo.jpg">-->
@@ -54,13 +72,58 @@
         <div id="about" onclick="openAbout()">About</div>
         <div id="ScheduleEstimate" onclick="SE(); SEPageMowing()">Get Estimate</div>
         <div id="ContactUs" onclick="openContactUsPage()">Need Help?</div>
-        <div id="JoinUs" onclick="openJoinUsPage()">Join Us</div>
+        <div id="login" onclick="openLoginPage()">Login</div>
+        <div id="creditInformation" onclick="openCreditInformationPage()">My Information</div>
 </div>
 
 <div id="phoneMenu"> Menu
     <div id="phoneabout" style="background-color: rgba(112, 255, 160, .5);" onclick="openAbout()">About</div>
     <div id="phoneScheduleEstimate" style="background-color: rgba(114, 189, 255, .5);" onclick="SE(); SEPageMowing()">Get Estimate</div>
     <div id="phoneContactUs" style="background-color: rgba(255, 114, 170, .5);" onclick="openContactUsPage()">Contact Us</div>
+    <div id="phoneLogin" style="background-color: rgba(225, 255, 125, 0.5);" onclick="openLoginPage()">Login</div>
+</div>
+
+
+</div>
+
+<div id="creditInformationPageImage" style="display: none; text-align: center;">
+<div id="creditInformationPage" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.885); color:rgb(70, 70, 70); width: 1000px; height: 800px;">
+    <div id="accountCoinBalanceTitle" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">Coins</div>
+    <div id="accountCoinBalance" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">loading...</div>
+<div id="accountNameMain" style="font-size: 60px; text-align: center;">Loading...</div>
+<br>
+<div id="accountCreationDateMain" style="font-size: large; text-align: center;">Loading...</div>
+<br><br><br><br><br>
+<div id="accountCreditBalanceTitle" style="font-size: 56px; text-align: center;">Lawn Credit</div>
+<br>
+<div id="accountCreditBalance" style="font-size: 56px; text-align: center;">loading...</div>
+<br><br><br><br><br>
+<br><br>
+<div id="accountShopButton" style="background-color: #00ff04; color: rgb(0, 0, 0); font-size: 40px; text-align: center;" onclick="openAccountShop()">Shop</div>
+<div id="accountCreditDescriptionButton" style="background-color: #000000; color: aqua; font-size: 40px; text-align: center;" onclick="openAccountCreditDescription()">Description</div>
+
+<div id="accountCreditDescription" style="font-size: 40px; text-align: center; display: none;">Your credit goes up when you pay your mowing <br>
+    payments on time. The higher the lawn credit the more coins you will get every week. You can use these coins to get <br>
+    discounts for mowing. The credit goes from 0 to 1000.</div>
+
+
+<div style="position: absolute; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Back</div>
+</div>
+
+<div id="accountShop" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 800px; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; display: none;">
+
+    <div id="item_1AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_1AccountShop()">$5<br>Discount for Mowing<br><br><br>8750 Coins</div>
+    <div id="item_2AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_2AccountShop()">+50 Credit<br>Discount for Mowing<br><br><br>1750 Coins</div>
+    <div id="item_3AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_3AccountShop()">$35<br>Discount for Mowing<br><br><br>61000 Coins</div>
+    <div id="item_4AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_4AccountShop()">$70<br>Discount for Mowing<br><br><br>120000 Coins</div>
+    <div id="item_5AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_5AccountShop()">$120<br>Discount for Mowing<br><br><br>245000 Coins</div>
+
+    <div style="position: relative; background-color: rgb(255, 0, 255); width: 100%; height: 40px;" onclick="back(); checkMenu();">Close</div>
+</div>
+
+<div id="PurchaseConfirmation">Are You Sure You Want To Purchase This?
+    <div id="yesPurchase" onclick="yesPurchase()">Yes</div>
+    <div id="noDontPurchase" onclick="noDontPurchase()">No</div>
 </div>
 
 
@@ -101,6 +164,7 @@
 
     <br>
     <br>
+	<!--<video id="sponserVideo" src="png/IMG_8054.MP4" style="position:relative; transform: translate(-50%, 0%); left: 50%; width: 300px; height: 600px;" type="video/mp4" autoplay controls></video>-->
     <br>
     <br>
 
@@ -110,13 +174,31 @@
 
 <div id="SEPageBK" style="position: absolute; background-color: #46cd6a00; min-width: 100%; height:1007px; display: none;">
 <div id="SEPage">
+    <!--<div id="SEPageBox1" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 2.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageMowing()">Mowing</div>
+    <div id="SEPageBox2" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 22.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageMulching()">Mulching</div>
+    <div id="SEPageBox3" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 42.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPagePlanting()">Planting</div>
+    <div id="SEPageBox4" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 62.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageWeeding()">Weeding</div>
+    <div id="SEPageBox5" style="width: 130px; height: 60px; position: absolute; top: 5%; left: 82.7%; background-color: rgba(0, 0, 0, 0.668); color: white; display: flex; align-items: center; justify-content: center; font-size: large;" onclick="SEPageCleaning()">Cleaning</div>
+    <button id="locationButton" style="width: 80px; height: 20px; position: absolute; transform: translate(-50%, 0px); top: 300px; left: 50%; background-color: rgba(0, 0, 0, 0.668); color: beige" onclick="scheduleAppointment()">Location?</button>
 
+    <div id="SEPageScheduleEstimateOn" style="position: absolute; transform: translate(-50%, -50%); top: 350px; left: 50%; background-color: rgb(0, 0, 0); color: rgb(130, 54, 236); display: flex; align-items: center; justify-content: center; font-size: large; text-align: center;"></div>
+    <div style="position: absolute; transform: translate(0%, -100%); top: 390px; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Close</div>-->
 </div>
 
 <div id="SEPageJobs" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 450px; left: 50%; display: none;">
     
     <div id="SEPageMowing" style="width: 100%; height: 100%; position: absolute; background-color: #24b600; color: rgb(0, 0, 0); display: none;">
-
+        <!--<label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageEdgeTrimmingCheckbox">Edge Trimming:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageEdgeTrimmingCheckbox" name="SEPageEdgeTrimmingCheckbox" value="1" checked><br>
+        <br>-->
+        <!--<label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageWeedEatCheckbox">Weed-Eat:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageWeedEatCheckbox" name="SEPageWeedEatCheckbox" value="1" checked><br>
+        <br>
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;" for="SEPageBlowingCheckbox">Blowing:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageBlowingCheckbox" name="SEPageBlowingCheckbox" value="1" checked><br>
+        <br>
+        <label style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 0 auto;; margin-bottom: 15px;" for="SEPageBaggingCheckbox">Bagging:</label>
+        <input style="text-align: right; display: flex; align-items: center; justify-content: center; font-size: 20px; transform: scale(1.5); width: 50%; margin: 10px auto 0;" type="checkbox" id="SEPageBaggingCheckbox" name="SEPageBaggingCheckbox" value="1" checked>-->
         
 
         <form onsubmit="sendEmailSEMowing(); reset(); return false;" style="margin-top: 60px;">
@@ -140,10 +222,13 @@
         </div>
 
 
-    <div id="SEPageMulching" style="width: 900px; height: 600px; display: none;">
-            <div style="position: absolute; background-color: #000000; color: aliceblue; width: 100%; height: 100%;">Sorry, We are not doing mulching jobs yet.</div>
+    <!--<div id="SEPagePressureWashing" style="width: 900px; height: 600px; display: none;">
+            <div style="position: absolute; background-color: #66deff; color: aliceblue; width: 100%; height: 100%; justify-content: center; text-align: center;">
+                <h1 style="color: black;">Pressure Washing</h1>
+            </div>
+
             <div style="position: absolute; transform: translate(0%, -100%); top: 100%; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="backTwo(); checkMenu();">Back</div>
-    </div>
+    </div>-->
 
     <div id="SEPagePlanting" style="width: 900px; height: 600px; position: absolute; transform: translate(-50%, -50%); top: 45%; left: 50%; display: none;">
             <div style="position: absolute; background-color: #000000; color: aliceblue; width: 100%; height: 100%;">Page not set up yet.</div>
@@ -184,8 +269,31 @@
 
 
 
-<div id="joinUsPage">
-    <h1 id="joinUsPageTitle">Mystical Lawns</h1>
+<div id="loginPage">
+    <h1 id="loginPageTitle" style="position: relative; top: 40%;">Mystical Lawns Credits</h1>
+    <form id="loginForm" style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(173, 255, 200, 0.361); display: flex; flex-direction: column; padding: 2vw 4vw; width: 70%; max-width: 600px; height: 600px; border-radius: 10px; font-weight: 800; margin-bottom: 20px; text-align: center;">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br><br>
+        
+        <label for="password">Last Initial:</label>
+        <input type="text" id="password" required><br><br>
+        
+        <button type="submit" value="Login" style="background-color: rgb(140, 0, 255); color: white; font-size: 19px; border: 0; cursor: pointer; font-family: Arial, Helvetica, sans-serif;">Login</button>
+      
+        <!--<br><br><button type="submit" style="background-color: rgb(140, 0, 255); color: white; font-size: 19px; border: 0; cursor: pointer; font-family: Arial, Helvetica, sans-serif;">Login</button>-->
+        <br><button style="background-color: rgb(0, 0, 0); color: white; font-size: 19px; border: 0; cursor: pointer; font-family: Arial, Helvetica, sans-serif;" onclick="openSignUpPage();">SignUp</button>
+    </form>
+
+    <div style="position: relative; right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Close</div>
+
+    <form id="loginForm">
+
+      </form>
+
+</div>
+
+<div id="signUpPage">
+    <h1 id="signUpPageTitle">Mystical Lawns</h1>
     <form onsubmit="sendEmail(); reset(); return false;" style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(173, 255, 200, 0.361); display: flex; flex-direction: column; padding: 2vw 4vw; width: 70%; max-width: 600px; height: 600px; border-radius: 10px; font-weight: 800; margin-bottom: 20px; text-align: center;">
         <input type="text" id="JoinUsPageNameInput" placeholder="Name" required>
 
@@ -196,24 +304,18 @@
         <input type="text" id="JoinUsPagePhoneNumInput" placeholder="Phone Number" required>
 
         <input type="number" id="JoinUsPageAgeInput" placeholder="Age" max="105" required>
-
-        <br>Optional:<textarea id="joinUsPageDescriptionInput" style="background-color: rgb(0, 0, 0); color: white; width: 595px; max-width: 595px;" type="text" id="Description" placeholder="Description" rows="16"></textarea>
       
         <br><br><button type="submit" style="background-color: rgb(140, 0, 255); color: white; font-size: 19px; border: 0; cursor: pointer;">Send</button>
-
-        <div style="position: absolute; background-color: black; width: 100%; height: 95%; transform: translate(-10.1%, -5.8%);">
-            <h1 style="position: relative; top: 200px; color: white; text-align: center; justify-content: center; align-items: center;">We are not hiring right now.</h1>
-        </div>
-
-        <div style="position: relative; transform: translate(0%, -100%); right: 0px; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Close</div>
-      </form>
-
-
+    </form>
 </div>
+
+<div id="itemBought" style="display: none;">0</div>
 
 
 
     <script src="MysticalLawns.js"></script>
+    <script src="buying_item.js"></script>
+    <script src="accounts.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
@@ -222,18 +324,17 @@
         SecureToken : "6c68c818-510d-4efd-99ca-fc793ea58f18",
         To : 'marvin@mysticallawns.com',
         From : "marvindaniels2016@gmail.com",
-        Subject : "I want to work with you.",
+        Subject : "Creating Account",
         Body : "Name: " + document.getElementById("JoinUsPageNameInput").value
                 + "<br> Last Name Initial : " +  document.getElementById("JoinUsPageNameInetInput").value
         + "<br> Email: " +  document.getElementById("JoinUsPageEmailInput").value
         + "<br> Phone Number: " +  document.getElementById("JoinUsPagePhoneNumInput").value
         + "<br> Age: " +  document.getElementById("JoinUsPageAgeInput").value
-        + "<br> Description: " +  document.getElementById("joinUsPageDescriptionInput").value
         + "<br> reply to " + "" + document.getElementById("JoinUsPageEmailInput").value
 
         //
     }).then(
-    message => alert("Message Sent - We will get back to you soon :)")
+    message => alert("Message Sent - Your account will be ready in 1-3 days")
     );
         }
 
@@ -277,9 +378,22 @@
     );
         }
 
-    </script>
-</body>
-</html>
+
+        function buyingEmailReciept() {
+        Email.send({
+        SecureToken : "6c68c818-510d-4efd-99ca-fc793ea58f18",
+        To : 'marvin@mysticallawns.com',
+        From : "marvindaniels2016@gmail.com",
+        Subject : "Buying Item",
+        Body : "Customer Name: " + document.getElementById("accountNameMain").innerText
+        + "<br> Bought: " + document.getElementById("itemBought").innerText
+
+
+    }).then(
+    message => alert("Item is being processed. This usually takes 1-3 days.")
+    );
+        }
+
     </script>
 </body>
 </html>
