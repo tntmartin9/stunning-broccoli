@@ -33,7 +33,7 @@ function backTwo() {
 function backShop() {
     document.getElementById("accountCoinsShop").style.display = 'none';
     document.getElementById("accountShop").style.display = 'none';
-    document.getElementById("accountCreditDescriptionPage").style.display = 'inline';
+    document.getElementById("accountCreditDescriptionPage").style.display = 'none';
     document.getElementById("creditInformationPage").style.display = 'inline';
 }
 
@@ -206,6 +206,26 @@ document.getElementById("loginForm").onsubmit = function(event) {
 
         const accountCoinBalance = document.getElementById("accountCoinBalance");
         accountCoinBalance.innerText = "0";
+        document.getElementById("creditInformation").style.display = 'inline';
+        document.getElementById("login").style.display = 'none';
+        alert("Login successful! Now you can check your account information at the top right");
+
+
+
+    } else if (username === 'u' && password === 'd' || username === 'U' && password === 'D') {
+        back();
+
+        const accountNameMain = document.getElementById("accountNameMain");
+        accountNameMain.innerText = "undefined";
+
+        const accountCreationDateMain = document.getElementById("accountCreationDateMain");
+        accountCreationDateMain.innerText = "6/25/2023";
+
+        const accountCreditBalance = document.getElementById("accountCreditBalance");
+        accountCreditBalance.innerText = "8";
+
+        const accountCoinBalance = document.getElementById("accountCoinBalance");
+        accountCoinBalance.innerText = "-3500";
         document.getElementById("creditInformation").style.display = 'inline';
         document.getElementById("login").style.display = 'none';
         alert("Login successful! Now you can check your account information at the top right");
