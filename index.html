@@ -87,38 +87,40 @@
 </div>
 
 <div id="creditInformationPageImage" style="display: none; text-align: center;">
-<div id="creditInformationPage" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.885); color:rgb(70, 70, 70); width: 1000px; height: 800px;">
-    <div id="accountCoinBalanceTitle" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">Coins</div>
-    <div id="accountCoinBalance" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">loading...</div>
-<div id="accountNameMain" style="font-size: 60px; text-align: center;">Loading...</div>
-<br>
-<div id="accountCreationDateMain" style="font-size: large; text-align: center;">Loading...</div>
-<br><br><br><br><br>
-<div id="accountCreditBalanceTitle" style="font-size: 56px; text-align: center;">Lawn Credit</div>
-<br>
-<div id="accountCreditBalance" style="font-size: 56px; text-align: center;">loading...</div>
-<br><br><br><br><br>
-<br><br>
-<div id="accountShopButton" style="background-color: #00ff04; color: rgb(0, 0, 0); font-size: 40px; text-align: center;" onclick="openAccountShop()">Shop</div>
-<div id="accountCreditDescriptionButton" style="background-color: #000000; color: aqua; font-size: 40px; text-align: center;" onclick="openAccountCreditDescription()">Description</div>
-
-<div id="accountCreditDescription" style="font-size: 40px; text-align: center; display: none;">Your credit goes up when you pay your mowing <br>
-    payments on time. The higher the lawn credit the more coins you will get every week. You can use these coins to get <br>
-    discounts for mowing. The credit goes from 0 to 1000.</div>
+    <div id="creditInformationPage" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.885); color:rgb(70, 70, 70); width: 1000px; height: 800px; border-radius: 8%; overflow: hidden;">
+        <div id="accountCoinBalanceTitle" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">Coins</div>
+        <div id="accountCoinBalance" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">loading...</div>
+        <div id="accountNameMain" style="font-size: 60px; text-align: center;">Loading...</div>
+        <br>
+        <div id="accountCreationDateMain" style="font-size: large; text-align: center;">Loading...</div>
+        <br><br><br><br><br>
+        <div id="accountCreditBalanceTitle" style="font-size: 56px; text-align: center;">Lawn Credit</div>
+        <br>
+        <div id="accountCreditBalance" style="font-size: 56px; text-align: center;">loading...</div>
+        <br><br><br><br><br>
+        <br><br>
+        <div id="accountShopButton" style="background-color: #00ff04; color: rgb(0, 0, 0); font-size: 40px; text-align: center;" onclick="openAccountShop()">Shop</div>
+        <div id="accountCoinsShopButton" style="background-color: #000000; color: aqua; font-size: 40px; text-align: center;" onclick="openAccountCoinsShop()">Purchase Coins</div>
+        <div id="accountCreditDescriptionButton" style="background-color: #000000; color: aqua; font-size: 40px; text-align: center; overflow-y: scroll;" onclick="openAccountCreditDescription()">Description</div>
 
 
-<div style="position: absolute; background-color: plum; width: 40px; height: 20px;" onclick="back(); checkMenu();">Back</div>
-</div>
+        <div style="position: absolute; background-color: plum; width: 40px; height: 20px; text-align: center;" onclick="back(); checkMenu();">Back</div>
 
-<div id="accountShop" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 800px; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; display: none;">
+    </div>
 
-    <div id="item_1AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_1AccountShop()">$5<br>Discount for Mowing<br><br><br>8750 Coins</div>
-    <div id="item_2AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_2AccountShop()">+50 Credit<br>Discount for Mowing<br><br><br>1750 Coins</div>
-    <div id="item_3AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_3AccountShop()">$35<br>Discount for Mowing<br><br><br>61000 Coins</div>
-    <div id="item_4AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_4AccountShop()">$70<br>Discount for Mowing<br><br><br>120000 Coins</div>
-    <div id="item_5AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large;" onclick="item_5AccountShop()">$120<br>Discount for Mowing<br><br><br>245000 Coins</div>
 
-    <div style="position: relative; background-color: rgb(255, 0, 255); width: 100%; height: 40px;" onclick="back(); checkMenu();">Close</div>
+
+<div id="accountCoinsShop" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.438); color:rgb(0, 0, 0); width: 900px; height: 400px; text-align: center; align-items: center; justify-content: center; display: none;">
+    <div id="item_0AccountCoinsShop" onclick="item_0AccountCoinsShop()">$10 For 1000 Coins</div>
+    <div id="item_1AccountCoinsShop" onclick="item_1AccountCoinsShop()">$35 For 3500 Coins</div>
+    <div id="item_2AccountCoinsShop" onclick="item_2AccountCoinsShop()">$40 For 4120 Coins +3%</div>
+    <div id="item_3AccountCoinsShop" onclick="item_3AccountCoinsShop()">$80 For 8400 Coins +5%</div>
+    <div id="item_4AccountCoinsShop" onclick="item_4AccountCoinsShop()">$90 For 10000 Coins +11%</div>
+    <div id="item_5AccountCoinsShop" onclick="item_5AccountCoinsShop()">$120 For 13800 Coins +15%</div>
+    <div id="accountTriangleCoinsShopLeft" onclick="accountTriangleCoinsShopLeftMoveBack()"></div>
+    <div id="accountTriangleCoinsShopRight" onclick="accountTriangleCoinsShopRightMoveFoward()"></div>
+
+    <div style="position: relative; top: 200px; background-color: rgb(255, 0, 255); width: 100%; height: 40px; text-align: center; font-size: x-large;" onclick="backShop(); checkMenu();">Close</div>
 </div>
 
 <div id="PurchaseConfirmation">Are You Sure You Want To Purchase This?
@@ -126,6 +128,33 @@
     <div id="noDontPurchase" onclick="noDontPurchase()">No</div>
 </div>
 
+
+
+<div id="accountShop" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 800px; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;">
+
+    <div id="item_0AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large; text-align: center;" onclick="item_0AccountShop()"><br>$40<br>Discount for Mowing<br><br><br>For 4000 Coins</div>
+    <div id="item_1AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large; text-align: center;" onclick="item_1AccountShop()"><br>$5<br>Discount for Mowing<br><br><br>500 Points</div>
+    <div id="item_2AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large; text-align: center;" onclick="item_2AccountShop()"><br>+10 Credit<br>This decreases the difficulty to get points <br><br><br>For 1750 Coins</div>
+    <div id="item_3AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large; text-align: center;" onclick="item_3AccountShop()"><br>$35<br>Discount for Mowing<br><br><br>For 3500 Points</div>
+    <div id="item_4AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large; text-align: center;" onclick="item_4AccountShop()"><br>$70<br>Discount for Mowing<br><br><br>For 7000 Points</div>
+    <div id="item_5AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large; text-align: center;" onclick="item_5AccountShop()"><br>$120<br>Discount for Mowing<br><br><br>For 10500 Points</div>
+
+    <div style="position: relative; background-color: rgb(255, 0, 255); width: 100%; height: 40px; text-align: center; font-size: x-large;" onclick="backShop(); checkMenu();">Close</div>
+</div>
+
+<div id="PurchaseConfirmation">Are You Sure You Want To Purchase This?
+    <div id="yesPurchase" onclick="yesPurchase()">Yes</div>
+    <div id="noDontPurchase" onclick="noDontPurchase()">No</div>
+</div>
+
+
+<div id="accountCreditDescriptionPage" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 800px; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;">
+    <div id="accountCreditDescription" style="font-size: 40px; text-align: center;"><br>Your credit goes up when you pay your mowing
+        payments on time. The higher the lawn credit the more points you will get for every dollar you spend. You can use these coins to get
+        discounts for mowing. The credit goes from 0 to 1000. You can go negative with your coins. There is a limit of -2000 Coins for new users.
+        Your credit goes lower if you dont pay it back within a month. If you pay it back one week before the due date or before than, your credit will go up</div>
+        <div style="position: relative; top: 200px; background-color: rgb(255, 0, 255); width: 100%; height: 40px; text-align: center; font-size: x-large;" onclick="backShop(); checkMenu();">Close</div>
+    </div>
 
 </div>
 
