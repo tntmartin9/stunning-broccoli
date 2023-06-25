@@ -30,6 +30,13 @@ function backTwo() {
     document.getElementById("SEPage").style.display = 'inline';
 }
 
+function backShop() {
+    document.getElementById("accountCoinsShop").style.display = 'none';
+    document.getElementById("accountShop").style.display = 'none';
+    document.getElementById("accountCreditDescriptionPage").style.display = 'inline';
+    document.getElementById("creditInformationPage").style.display = 'inline';
+}
+
 function openAbout() {
     hideEverything();
     document.getElementById("aboutPage").style.display = 'inline';
@@ -89,16 +96,19 @@ function openCreditInformationPage() {
 }
 
 function openAccountCreditDescription() {
-    document.getElementById("accountNameMain").style.display = 'none';
-    document.getElementById("accountCreationDateMain").style.display = 'none';
-    document.getElementById("accountCreditBalanceTitle").style.display = 'none';
-    document.getElementById("accountCreditBalance").style.display = 'none';
-    document.getElementById("accountCreditDescription").style.display = 'inline';  
+    document.getElementById("creditInformationPage").style.display = 'none';
+    document.getElementById("accountCreditDescriptionPage").style.display = 'inline';  
 }
 
 function openAccountShop() {
     document.getElementById("creditInformationPage").style.display = 'none';
     document.getElementById("accountShop").style.display = 'inline'; 
+}
+
+function openAccountCoinsShop() {
+    document.getElementById("creditInformationPage").style.display = 'none';
+    document.getElementById("accountCoinsShop").style.display = 'inline';
+    document.getElementById("item_0AccountCoinsShop").style.display = 'inline';
 }
 
 function hideEverything() {
@@ -129,7 +139,8 @@ function hideEverything() {
     //account
     document.getElementById("accountShop").style.display = 'none';
     document.getElementById("creditInformationPageImage").style.display = 'none';
-    document.getElementById("accountCreditDescription").style.display = 'none';
+    document.getElementById("accountCreditDescriptionPage").style.display = 'none'; 
+    document.getElementById("accountCoinsShop").style.display = 'none'; 
 }
 
 
@@ -171,16 +182,17 @@ document.getElementById("loginForm").onsubmit = function(event) {
         const accountCreationDateMain = document.getElementById("accountCreationDateMain");
         accountCreationDateMain.innerText = "6/20/2023";
         const accountCreditBalance = document.getElementById("accountCreditBalance");
-        accountCreditBalance.innerText = "to much to count";
+        accountCreditBalance.innerText = "1000";
 
         const accountCoinBalance = document.getElementById("accountCoinBalance");
         accountCoinBalance.innerText = "8750";
         document.getElementById("creditInformation").style.display = 'inline';
         document.getElementById("login").style.display = 'none';
+        //marvin@mysticallawns.com
 
 
 
-    } else if (username === 'Letty' && password === 'd' || username === 'Letty' && password === 'd') {
+    } else if (username === 'Letty' && password === 'd' || username === 'letty' && password === 'd') {
         back();
 
         const accountNameMain = document.getElementById("accountNameMain");
