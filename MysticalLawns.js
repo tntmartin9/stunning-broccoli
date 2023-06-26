@@ -228,10 +228,10 @@ document.getElementById("loginForm").onsubmit = function(event) {
         accountCreationDateMain.innerText = "6/25/2023";
 
         const accountCreditBalance = document.getElementById("accountCreditBalance");
-        accountCreditBalance.innerText = "8";
+        accountCreditBalance.innerText = "12";
 
         const accountCoinBalance = document.getElementById("accountCoinBalance");
-        accountCoinBalance.innerText = "-3500";
+        accountCoinBalance.innerText = "0";
         document.getElementById("creditInformation").style.display = 'inline';
         document.getElementById("login").style.display = 'none';
         alert("Login successful! Now you can check your account information at the top right");
