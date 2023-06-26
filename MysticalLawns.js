@@ -120,6 +120,7 @@ function hideEverything() {
     // document.getElementById("MysticalLawns").style.display = 'none';
     document.getElementById("aboutPage").style.display = 'none';
     document.getElementById("aboutPagepng").style.display = 'none';
+    //document.getElementById("videoOneMowing").style.display = 'none'; 
 
     //estimates page
     document.getElementById("SEPage").style.display = 'none';
@@ -144,7 +145,7 @@ function hideEverything() {
 }
 
 
-
+let menuSwitch = false;
 
 function checkMenu() {
 const phoneMenu = document.getElementById('phoneMenu');
@@ -152,7 +153,6 @@ const style = window.getComputedStyle(phoneMenu);
 const color = style.getPropertyValue('color');
 
 let menuSwitchDetect = color;
-let menuSwitch = false;
 
 if (menuSwitchDetect === 'rgb(255, 255, 255)') {
     menuSwitch = true;
@@ -186,8 +186,14 @@ document.getElementById("loginForm").onsubmit = function(event) {
 
         const accountCoinBalance = document.getElementById("accountCoinBalance");
         accountCoinBalance.innerText = "8750";
-        document.getElementById("creditInformation").style.display = 'inline';
+
+        if (menuSwitch == false) {
         document.getElementById("login").style.display = 'none';
+        document.getElementById("creditInformation").style.display = 'inline';
+        } else {
+        document.getElementById("phoneLogin").style.display = 'none';
+        document.getElementById("phoneCreditInformation").style.display = 'inline';
+        }
         //marvin@mysticallawns.com
 
 
@@ -202,10 +208,10 @@ document.getElementById("loginForm").onsubmit = function(event) {
         accountCreationDateMain.innerText = "6/20/2023";
 
         const accountCreditBalance = document.getElementById("accountCreditBalance");
-        accountCreditBalance.innerText = "0";
+        accountCreditBalance.innerText = "580";
 
         const accountCoinBalance = document.getElementById("accountCoinBalance");
-        accountCoinBalance.innerText = "0";
+        accountCoinBalance.innerText = "-110000";
         document.getElementById("creditInformation").style.display = 'inline';
         document.getElementById("login").style.display = 'none';
         alert("Login successful! Now you can check your account information at the top right");
