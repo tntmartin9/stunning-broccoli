@@ -62,7 +62,12 @@
 
 
     </div>
+
 </div>
+
+<!--<div id="videoOneMowing">
+    <video id="SEPageMowing" src="png/mowing2.mov" style="width: 100%; height: 100%;" controls autoplay></video>
+</div>-->
 
 
 <div id="name">Marvin Daniels</div>
@@ -81,13 +86,14 @@
     <div id="phoneScheduleEstimate" style="background-color: rgba(114, 189, 255, .5);" onclick="SE(); SEPageMowing()">Get Estimate</div>
     <div id="phoneContactUs" style="background-color: rgba(255, 114, 170, .5);" onclick="openContactUsPage()">Contact Us</div>
     <div id="phoneLogin" style="background-color: rgba(225, 255, 125, 0.5);" onclick="openLoginPage()">Login</div>
+    <div id="phoneCreditInformation" style="background-color: rgba(225, 255, 125, 0.5);" onclick="openCreditInformationPage()">My Information</div>
 </div>
 
 
 </div>
 
 <div id="creditInformationPageImage" style="display: none; text-align: center;">
-    <div id="creditInformationPage" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.885); color:rgb(70, 70, 70); width: 1000px; height: 800px; border-radius: 8%; overflow: hidden;">
+    <div id="creditInformationPage" style="position: absolute; top: 13%; left: 25%; transform: translate(0%, 0%); background-color: rgba(255, 255, 255, 0.885); color:rgb(70, 70, 70); width: 50%; height: 80%; border-radius: 8%; overflow: hidden;">
         <div id="accountCoinBalanceTitle" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">Coins</div>
         <div id="accountCoinBalance" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">loading...</div>
         <div id="accountNameMain" style="font-size: 60px; text-align: center;">Loading...</div>
@@ -110,7 +116,7 @@
 
 
 
-<div id="accountCoinsShop" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.438); color:rgb(0, 0, 0); width: 900px; height: 400px; text-align: center; align-items: center; justify-content: center; display: none;">
+<div id="accountCoinsShop" style="position: absolute; top: 13%; left: 50%; transform: translate(-50%, 0%); background-color: rgba(0, 0, 0, 0.438); color:rgb(0, 0, 0); width: 900px; height: 400px; text-align: center; align-items: center; justify-content: center; display: none;">
     <div id="item_0AccountCoinsShop" onclick="item_0AccountCoinsShop()">$10 For 1000 Coins</div>
     <div id="item_1AccountCoinsShop" onclick="item_1AccountCoinsShop()">$35 For 3500 Coins</div>
     <div id="item_2AccountCoinsShop" onclick="item_2AccountCoinsShop()">$40 For 4120 Coins +3%</div>
@@ -130,7 +136,7 @@
 
 
 
-<div id="accountShop" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 800px; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;">
+<div id="accountShop" style="position: absolute; top: 13%; left: 50%; transform: translate(-50%, 0%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 80%; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;">
 
     <div id="item_0AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large; text-align: center;" onclick="item_0AccountShop()"><br>$40<br>Discount for Mowing<br><br><br>For 4000 Coins</div>
     <div id="item_1AccountShop" style="position: relative; margin: 15px; width: 555px; height: 250px; background-color: #000000; color: aqua; font-size: xx-large; text-align: center;" onclick="item_1AccountShop()"><br>$5<br>Discount for Mowing<br><br><br>500 Points</div>
@@ -148,7 +154,7 @@
 </div>
 
 
-<div id="accountCreditDescriptionPage" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 800px; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;">
+<div id="accountCreditDescriptionPage" style="position: absolute; top: 13%; left: 35%; transform: translate(0%, 0%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 80%; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;">
     <div id="accountCreditDescription" style="font-size: 40px; text-align: center;"><br>Your credit goes up when you pay your mowing
         payments on time. The higher the lawn credit the more points you will get for every dollar you spend. You can use these coins to get
         discounts for mowing. The credit goes from 0 to 1000. You can go negative with your coins. There is a limit of -2000 Coins for new users.
@@ -157,6 +163,16 @@
     </div>
 
 </div>
+
+<style>
+@media all and (max-width: 700px) {
+
+    #creditInformationPage {
+    width: 90%;
+}
+
+}
+</style>
 
 
 
@@ -300,7 +316,7 @@
 
 <div id="loginPage">
     <h1 id="loginPageTitle" style="position: relative; top: 40%;">Mystical Lawns Credits</h1>
-    <form id="loginForm" style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; background-color: rgba(173, 255, 200, 0.361); display: flex; flex-direction: column; padding: 2vw 4vw; width: 70%; max-width: 600px; height: 600px; border-radius: 10px; font-weight: 800; margin-bottom: 20px; text-align: center;">
+    <form id="loginForm" style="position: absolute; transform: translate(-50%, 0%); top: 12%; left: 50%; background-color: rgba(173, 255, 200, 0.361); display: flex; flex-direction: column; padding: 2vw 4vw; width: 70%; max-width: 600px; height: 600px; border-radius: 10px; font-weight: 800; margin-bottom: 20px; text-align: center;">
         <label for="username">Username:</label>
         <input type="text" id="username" required><br><br>
         
