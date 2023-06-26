@@ -430,6 +430,7 @@ border: 0px;
   #item_5AccountCoinsShop {
     position: relative; top: 32%; left: 0px; transform: translate(0%, -50%); width: 100%; height: 200px; background-color: #8a8a8a; color: aqua; text-align: center; align-items: center; justify-content: center; font-size: 60px; font-family: Arial, Helvetica, sans-serif; font-style: oblique; display: none;
   }
+  
 
 @media all and (max-width: 700px) {
 
@@ -703,3 +704,50 @@ position: absolute; top: 0px; padding: 0%; min-width: 300px; width: 700px; heigh
 #joinUsPageDescriptionInput::placeholder {
 color: white;
 }
+
+
+
+
+
+
+
+      /* Computer */
+      @media (min-width: 901px) {
+        #creditInformationPage {
+          overflow-y: hidden;
+        }
+    
+        #accountCoinsShop {
+            width: 900px; height: 400px;
+            top: 0px; left: 0px;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+        }
+    
+        #accountCreditDescriptionPage {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0);
+            width: 600px; height: 80%;
+            overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;
+        }
+      }
+
+
+    /* phone */
+  @media (max-width: 900px) {
+    #creditInformationPage {
+      overflow-y: scroll;
+    }
+
+    #accountCoinsShop {
+        width: 890px; height: 200px;
+        top: 0px; left: 0px;
+        top: 8%; left: 0%; transform: translate(0%, 0%);
+    }
+
+    #accountCreditDescriptionPage {
+        position: absolute; top: 15%; left: 150px; transform: translate(0%, 0%);
+        background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0);
+        width: 600px; height: 80%;
+        overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;
+    }
+  }
