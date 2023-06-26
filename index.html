@@ -93,7 +93,8 @@
 </div>
 
 <div id="creditInformationPageImage" style="display: none; text-align: center;">
-    <div id="creditInformationPage" style="position: absolute; top: 13%; left: 25%; transform: translate(0%, 0%); background-color: rgba(255, 255, 255, 0.885); color:rgb(70, 70, 70); width: 50%; height: 80%; border-radius: 8%; overflow: hidden;">
+    <div id="creditInformationPage" style="position: absolute; top: 13%; left: 25%; transform: translate(0%, 0%); background-color: rgba(255, 255, 255, 0.885); color:rgb(70, 70, 70); width: 50%; height: 80%; border-radius: 8%; overflow-x: hidden;">
+      
         <div id="accountCoinBalanceTitle" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">Coins</div>
         <div id="accountCoinBalance" style="background-color: #00eaff44; color: rgb(0, 0, 0); font-size: 20px; text-align: center;">loading...</div>
         <div id="accountNameMain" style="font-size: 60px; text-align: center;">Loading...</div>
@@ -110,13 +111,13 @@
         <div id="accountCreditDescriptionButton" style="background-color: #000000; color: aqua; font-size: 40px; text-align: center; overflow-y: scroll;" onclick="openAccountCreditDescription()">Description</div>
 
 
-        <div style="position: absolute; background-color: plum; width: 40px; height: 20px; text-align: center;" onclick="back(); checkMenu();">Back</div>
+        <div style="position: absolute; background-color: plum; width: 100%; height: 20px; text-align: center;" onclick="back(); checkMenu();">Back</div>
 
     </div>
 
 
 
-<div id="accountCoinsShop" style="position: absolute; top: 13%; left: 50%; transform: translate(-50%, 0%); background-color: rgba(0, 0, 0, 0.438); color:rgb(0, 0, 0); width: 900px; height: 400px; text-align: center; align-items: center; justify-content: center; display: none;">
+<div id="accountCoinsShop" style="position: absolute; background-color: rgba(0, 0, 0, 0.438); color:rgb(0, 0, 0); text-align: center; align-items: center; justify-content: center; display: none;">
     <div id="item_0AccountCoinsShop" onclick="item_0AccountCoinsShop()">$10 For 1000 Coins</div>
     <div id="item_1AccountCoinsShop" onclick="item_1AccountCoinsShop()">$35 For 3500 Coins</div>
     <div id="item_2AccountCoinsShop" onclick="item_2AccountCoinsShop()">$40 For 4120 Coins +3%</div>
@@ -154,11 +155,16 @@
 </div>
 
 
-<div id="accountCreditDescriptionPage" style="position: absolute; top: 13%; left: 35%; transform: translate(0%, 0%); background-color: rgba(255, 255, 255, 0.713); color:rgb(0, 0, 0); width: 600px; height: 80%; overflow-y: hidden; overflow-y: scroll; overflow-x: hidden; border-radius: 5%; display: none;">
-    <div id="accountCreditDescription" style="font-size: 40px; text-align: center;"><br>Your credit goes up when you pay your mowing
-        payments on time. The higher the lawn credit the more points you will get for every dollar you spend. You can use these coins to get
-        discounts for mowing. The credit goes from 0 to 1000. You can go negative with your coins. There is a limit of -2000 Coins for new users.
-        Your credit goes lower if you dont pay it back within a month. If you pay it back one week before the due date or before than, your credit will go up</div>
+<div id="accountCreditDescriptionPage">
+    <div id="accountCreditDescription" style="font-size: 40px; text-align: center;"><br> Credit: Your credit goes up when you pay your mowing 
+        payments on time. The credit goes from 0 to 1000. If you dont pay mowing coins back within a month, your credit goes lower. 
+        If you pay the mowing coins back one week before the due date or before than, your credit will go up
+        <br> Mowing coins: You can buy mowing coins at the mowing coins shop. Mowing coins make it easier to pay online. 
+        Coins are a currency that you can use to pay for mowing jobs. You can go negative with your mowing coins. There is a limit of -2000 mowing coins for new users.
+        <br> Points: You get points for every dollar you spend. 
+        The higher the lawn credit the more points you will get for every dollar you spend.
+        You can use these points to get discounts for mowing. 
+        </div>
         <div style="position: relative; top: 200px; background-color: rgb(255, 0, 255); width: 100%; height: 40px; text-align: center; font-size: x-large;" onclick="backShop(); checkMenu();">Close</div>
     </div>
 
@@ -440,5 +446,7 @@
         }
 
     </script>
+</body>
+</html>
 </body>
 </html>
