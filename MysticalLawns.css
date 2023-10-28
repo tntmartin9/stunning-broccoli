@@ -38,13 +38,13 @@ width: 100%;
 height: 100%;
 }
 
-#TLogo_Created_By_Zach {
+#MysticalLawnsOfficialLogo {
     position: absolute;
     top: 45px;
     left: 20px;
     width: 120px;
     height: 120px;
-    background-image: url(png/MY4_1.jpg);
+    background-image: url(png/IMG_5960.png);
     border-radius: 50%;
     background-size: cover;
 }
